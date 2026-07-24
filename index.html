@@ -6,7 +6,7 @@ body{background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,"Segoe U
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 nav{position:sticky;top:0;background:rgba(10,12,16,.92);backdrop-filter:blur(8px);
 border-bottom:1px solid var(--border);padding:.7rem 1.2rem;display:flex;gap:1.2rem;
-align-items:center;z-index:10}
+align-items:center;flex-wrap:wrap;z-index:10}
 nav .brand{font-weight:700;color:var(--text)}
 main{max-width:1200px;margin:0 auto;padding:2rem 1.2rem}
 .hero{text-align:center;padding:3.5rem 1rem 2.5rem}
@@ -17,6 +17,9 @@ main{max-width:1200px;margin:0 auto;padding:2rem 1.2rem}
 .btn{border:1px solid var(--border);background:var(--card);padding:.55rem 1.1rem;
 border-radius:8px;color:var(--text);font-weight:600}
 .btn.primary{background:#1450b8;border-color:#1450b8}
+.notice{max-width:820px;margin:0 auto 1.4rem;padding:.9rem 1rem;text-align:left;
+background:#141b27;border:1px solid #35527a;border-radius:10px;color:#c9d7ea}
+.notice strong{color:#e6edf3}.notice a{font-weight:600}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:1.4rem}
 .card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
@@ -31,7 +34,7 @@ text-align:center;color:var(--mute)}
 footer .tag{color:var(--accent);font-weight:600}
 </style></head><body><nav><span class="brand">Measure the Pixels</span>
 <a href="index.html">Home</a><a href="gallery.html">Gallery</a>
-<a href="changelog.html">Changelog</a><a href="about.html">About</a>
+<a href="handbook.html">Handbook</a><a href="changelog.html">Changelog</a><a href="about.html">About</a>
 <a href="https://www.youtube.com/@measurethepixels">YouTube</a><a href="https://github.com/measurethepixels/nova">Code</a></nav><main><div class="hero"><h1>Measure the Pixels</h1>
 <p class="sub">Building an AI Astrophotographer</p>
 <p>NOVA is an autonomous processing engine: it stacks, processes, and grades
@@ -41,31 +44,36 @@ pixel statistics, every run versioned like the software it is.</p>
 <div class="btns"><a class="btn primary" href="https://www.youtube.com/@measurethepixels">Watch the episodes</a>
 <a class="btn" href="https://github.com/measurethepixels/nova">Get the code</a>
 <a class="btn" href="gallery.html">See NOVA's work</a></div></div>
+<div class="notice"><strong>Public preview:</strong> NOVA is actively being
+developed. The images, processing history, and production system are real; the
+public installation package and clean-machine verification are still being
+formalized. Explore the project now, or follow the channel for the verified
+release and AI-assisted installation walkthrough.</div>
 <h2>Latest from the engine</h2><div class="grid"><div class="card"><img src="img/m-51.jpg" alt="M 51" loading="lazy">
 <div class="meta"><span class="t">M 51</span>
-<span class="s" title="NOVA's self-grade">9.0</span></div></div><div class="card"><img src="img/ngc-7000.jpg" alt="NGC 7000" loading="lazy">
-<div class="meta"><span class="t">NGC 7000</span>
-<span class="s" title="NOVA's self-grade">8.5</span></div></div><div class="card"><img src="img/ngc-2244-satellite-cluster.jpg" alt="NGC 2244 Satellite Cluster" loading="lazy">
+<span class="s" title="NOVA's self-grade">9.0</span></div></div><div class="card"><img src="img/ngc-2244-satellite-cluster.jpg" alt="NGC 2244 Satellite Cluster" loading="lazy">
 <div class="meta"><span class="t">NGC 2244 Satellite Cluster</span>
+<span class="s" title="NOVA's self-grade">8.5</span></div></div><div class="card"><img src="img/ngc-7000.jpg" alt="NGC 7000" loading="lazy">
+<div class="meta"><span class="t">NGC 7000</span>
 <span class="s" title="NOVA's self-grade">8.5</span></div></div><div class="card"><img src="img/m-31.jpg" alt="M 31" loading="lazy">
 <div class="meta"><span class="t">M 31</span>
-<span class="s" title="NOVA's self-grade">8.4</span></div></div><div class="card"><img src="img/m-45.jpg" alt="M 45" loading="lazy">
-<div class="meta"><span class="t">M 45</span>
-<span class="s" title="NOVA's self-grade">8.2</span></div></div><div class="card"><img src="img/ic-1805.jpg" alt="IC 1805" loading="lazy">
+<span class="s" title="NOVA's self-grade">8.4</span></div></div><div class="card"><img src="img/ic-1805.jpg" alt="IC 1805" loading="lazy">
 <div class="meta"><span class="t">IC 1805</span>
-<span class="s" title="NOVA's self-grade">8.2</span></div></div><div class="card"><img src="img/m-42.jpg" alt="M 42" loading="lazy">
-<div class="meta"><span class="t">M 42</span>
 <span class="s" title="NOVA's self-grade">8.2</span></div></div><div class="card"><img src="img/m-101.jpg" alt="M 101" loading="lazy">
 <div class="meta"><span class="t">M 101</span>
-<span class="s" title="NOVA's self-grade">8.2</span></div></div><div class="card"><img src="img/m-66.jpg" alt="M 66" loading="lazy">
-<div class="meta"><span class="t">M 66</span>
-<span class="s" title="NOVA's self-grade">7.8</span></div></div><div class="card"><img src="img/ngc-6888.jpg" alt="NGC 6888" loading="lazy">
-<div class="meta"><span class="t">NGC 6888</span>
-<span class="s" title="NOVA's self-grade">7.8</span></div></div><div class="card"><img src="img/sh-2-298.jpg" alt="SH 2-298" loading="lazy">
+<span class="s" title="NOVA's self-grade">8.2</span></div></div><div class="card"><img src="img/m-42.jpg" alt="M 42" loading="lazy">
+<div class="meta"><span class="t">M 42</span>
+<span class="s" title="NOVA's self-grade">8.2</span></div></div><div class="card"><img src="img/m-45.jpg" alt="M 45" loading="lazy">
+<div class="meta"><span class="t">M 45</span>
+<span class="s" title="NOVA's self-grade">8.2</span></div></div><div class="card"><img src="img/sh-2-298.jpg" alt="SH 2-298" loading="lazy">
 <div class="meta"><span class="t">SH 2-298</span>
-<span class="s" title="NOVA's self-grade">7.8</span></div></div><div class="card"><img src="img/m-13.jpg" alt="M 13" loading="lazy">
-<div class="meta"><span class="t">M 13</span>
+<span class="s" title="NOVA's self-grade">7.8</span></div></div><div class="card"><img src="img/m-16.jpg" alt="M 16" loading="lazy">
+<div class="meta"><span class="t">M 16</span>
+<span class="s" title="NOVA's self-grade">7.8</span></div></div><div class="card"><img src="img/m-81.jpg" alt="M 81" loading="lazy">
+<div class="meta"><span class="t">M 81</span>
+<span class="s" title="NOVA's self-grade">7.8</span></div></div><div class="card"><img src="img/m-20.jpg" alt="M 20" loading="lazy">
+<div class="meta"><span class="t">M 20</span>
 <span class="s" title="NOVA's self-grade">7.8</span></div></div></div></main><footer>NOVA — Autonomous Processing Engine · every image processed and
 graded by the AI itself · <a href="https://github.com/measurethepixels/nova">code</a> · <a href="https://www.youtube.com/@measurethepixels">episodes</a>
 <div class="tag" style="margin-top:.6rem">Measure the pixels. Make the call.</div>
-</footer></body></html>
+</footer><script></script></body></html>

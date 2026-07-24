@@ -6,7 +6,7 @@ body{background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,"Segoe U
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 nav{position:sticky;top:0;background:rgba(10,12,16,.92);backdrop-filter:blur(8px);
 border-bottom:1px solid var(--border);padding:.7rem 1.2rem;display:flex;gap:1.2rem;
-align-items:center;z-index:10}
+align-items:center;flex-wrap:wrap;z-index:10}
 nav .brand{font-weight:700;color:var(--text)}
 main{max-width:1200px;margin:0 auto;padding:2rem 1.2rem}
 .hero{text-align:center;padding:3.5rem 1rem 2.5rem}
@@ -17,6 +17,9 @@ main{max-width:1200px;margin:0 auto;padding:2rem 1.2rem}
 .btn{border:1px solid var(--border);background:var(--card);padding:.55rem 1.1rem;
 border-radius:8px;color:var(--text);font-weight:600}
 .btn.primary{background:#1450b8;border-color:#1450b8}
+.notice{max-width:820px;margin:0 auto 1.4rem;padding:.9rem 1rem;text-align:left;
+background:#141b27;border:1px solid #35527a;border-radius:10px;color:#c9d7ea}
+.notice strong{color:#e6edf3}.notice a{font-weight:600}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:1.4rem}
 .card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
@@ -31,7 +34,7 @@ text-align:center;color:var(--mute)}
 footer .tag{color:var(--accent);font-weight:600}
 </style></head><body><nav><span class="brand">Measure the Pixels</span>
 <a href="index.html">Home</a><a href="gallery.html">Gallery</a>
-<a href="changelog.html">Changelog</a><a href="about.html">About</a>
+<a href="handbook.html">Handbook</a><a href="changelog.html">Changelog</a><a href="about.html">About</a>
 <a href="https://www.youtube.com/@measurethepixels">YouTube</a><a href="https://github.com/measurethepixels/nova">Code</a></nav><main><div class="prose"><h2>Pipeline changelog</h2><p style="color:var(--mute)">Every version of NOVA's judgment, and the measurement that drove it. This is the AI's education, in public.</p><h2>Autoprocess Workflow Changelog</h2>
 <p>Human-readable mirror of <code>workflow_history.json</code> (the machine source of truth). The <b>current version</b> is stamped into every run&#x27;s <code>run.log</code> (<code>workflow_version</code>) and inherited by each saved critique, so the batch evaluation can group runs by the pipeline version that produced them.</p>
 <p><b>Semver policy (scoring pipeline):</b> <li><b>MAJOR</b> — scoring model or step add/remove; scores no longer comparable across</li>   versions (resets the critique baseline). <li><b>MINOR</b> — param/threshold/gate tuning that changes output but keeps comparability.</li> <li><b>PATCH</b> — bug fix not expected to change good-run output.</li></p>
@@ -468,4 +471,4 @@ footer .tag{color:var(--accent);font-weight:600}
 </div></main><footer>NOVA — Autonomous Processing Engine · every image processed and
 graded by the AI itself · <a href="https://github.com/measurethepixels/nova">code</a> · <a href="https://www.youtube.com/@measurethepixels">episodes</a>
 <div class="tag" style="margin-top:.6rem">Measure the pixels. Make the call.</div>
-</footer></body></html>
+</footer><script></script></body></html>
