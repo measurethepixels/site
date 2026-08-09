@@ -1,0 +1,105 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/"><title>Pedestal Removal — NOVA Handbook</title><style>
+:root{--bg:#0a0c10;--card:#12161d;--border:#2a313b;--text:#e6edf3;--mute:#8b949e;
+--accent:#5a96ff;--gold:#d2a528}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+nav{position:sticky;top:0;background:rgba(10,12,16,.92);backdrop-filter:blur(8px);
+border-bottom:1px solid var(--border);padding:.7rem 1.2rem;display:flex;gap:1.2rem;
+align-items:center;z-index:10}
+nav .brand{font-weight:700;color:var(--text)}
+main{max-width:1200px;margin:0 auto;padding:2rem 1.2rem}
+.hero{text-align:center;padding:3.5rem 1rem 2.5rem}
+.hero h1{font-size:2.6rem;letter-spacing:.5px}
+.hero p.sub{color:var(--mute);font-size:1.15rem;margin-top:.4rem}
+.hero p.tag{color:var(--accent);font-weight:600;margin-top:1rem}
+.btns{margin-top:1.4rem;display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.btn{border:1px solid var(--border);background:var(--card);padding:.55rem 1.1rem;
+border-radius:8px;color:var(--text);font-weight:600}
+.btn.primary{background:#1450b8;border-color:#1450b8}
+.notice{max-width:820px;margin:0 auto 1.4rem;padding:.9rem 1rem;text-align:left;
+background:#141b27;border:1px solid #35527a;border-radius:10px;color:#c9d7ea}
+.notice strong{color:#e6edf3}.notice a{font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:1.4rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.card .meta{padding:.55rem .8rem;display:flex;justify-content:space-between;align-items:center}
+.card .t{font-weight:600}.card .s{color:var(--gold);font-family:ui-monospace,monospace}
+h2{margin:2.2rem 0 .6rem;font-size:1.5rem}
+.prose{max-width:760px}.prose p{margin:.8rem 0}.prose li{margin:.35rem 0 .35rem 1.2rem}
+.prose h2{margin-top:2rem}.prose h3{margin:1.4rem 0 .4rem}
+.prose code{background:var(--card);border:1px solid var(--border);padding:.1rem .35rem;border-radius:5px;font-size:.9em}
+footer{border-top:1px solid var(--border);margin-top:3rem;padding:2rem 1.2rem;
+text-align:center;color:var(--mute)}
+footer .tag{color:var(--accent);font-weight:600}
+
+.hb-head{max-width:850px;margin:0 auto 1.5rem}.hb-head p{color:var(--text2,var(--mute))}
+.hb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.hb-card,.hb-tool{border:1px solid var(--border);border-radius:10px;padding:1rem;background:var(--bg2,var(--card))}
+.hb-card h2,.hb-tool h2{margin-top:0}.hb-card span,.hb-head span,.hb-tool small{color:var(--text2,var(--mute))}
+.hb-two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.hb-matrix,.hb-diagnostics{width:100%;border-collapse:collapse}
+.hb-matrix th,.hb-matrix td,.hb-diagnostics th,.hb-diagnostics td{padding:.55rem;border:1px solid var(--border);vertical-align:top;text-align:left}
+.hb-tool{margin:1rem 0}.hb-tool ol,.hb-tool ul,section ul{padding-left:1.3rem}
+.hb-controls{display:grid;grid-template-columns:minmax(10rem,1fr) 2fr;gap:.35rem 1rem}
+.hb-controls dt{font-weight:700}.hb-controls dd{margin:0}.empty{color:var(--text2,var(--mute))}
+.hb-validation{color:var(--gold,#d2a528)}.hb-validated{color:#43c97b}
+@media(max-width:720px){.hb-two{grid-template-columns:1fr}.hb-matrix{font-size:.8rem}}
+
+.ba-slider { position: relative; overflow: hidden; border-radius: 8px; cursor: ew-resize;
+             user-select: none; border: 1px solid var(--border); }
+.ba-slider .ba-after { display: block; width: 100%; }
+.ba-slider .ba-before { position: absolute; top: 0; left: 0; width: 100%;
+                        clip-path: inset(0 50% 0 0); pointer-events: none; }
+.ba-slider .ba-divider { position: absolute; top: 0; left: 50%; width: 2px; height: 100%;
+                         background: rgba(255,255,255,.8); pointer-events: none;
+                         transform: translateX(-50%); }
+.ba-slider .ba-lbl { position: absolute; top: 8px; background: rgba(0,0,0,.65); color: #fff;
+                     font-size: .62rem; padding: 1px 6px; border-radius: 3px;
+                     pointer-events: none; letter-spacing: .05em; text-transform: uppercase; }
+.ba-slider .ba-lbl-l { left: 8px; }
+.ba-slider .ba-lbl-r { right: 8px; }
+.ba-slider .ba-range { position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                       opacity: 0; cursor: ew-resize; margin: 0; }
+.ba-cap { font-size: .76rem; color: var(--text2); margin-top: .4rem; font-style: italic; }
+</style></head><body><nav><span class="brand">Measure the Pixels</span>
+<a href="index.html">Home</a><a href="gallery.html">Gallery</a>
+<a href="changelog.html">Changelog</a><a href="about.html">About</a>
+<a href="handbook/index.html">Handbook</a>
+<a href="https://www.youtube.com/@measurethepixels">YouTube</a><a href="https://github.com/measurethepixels/nova">Code</a></nav><main>
+<p><a href="handbook/index.html">← Handbook</a></p>
+<header class="hb-head"><h1>Pedestal Removal</h1><p>Remove a known residual constant electronic offset without confusing legitimate sky signal, noise, interpolation, or an isolated dark pixel with that offset.</p>
+<span>schema 1 · revision 1</span></header>
+<section><h2>Recognize it</h2><ul><li>Calibration records identify a residual constant offset that was not removed.</li><li>Calibrated subframes show left-edge clipping that requires a documented output pedestal during recalibration, rather than post-stack minimum subtraction.</li></ul></section>
+<section><h2>Intended output</h2><p>A still-linear image with only the confirmed uniform offset removed, no new shadow clipping, and recorded before/after channel statistics.</p></section>
+<section><h2>Required input state</h2><ul><li>Linear data with known calibration provenance.</li><li>A documented offset value or calibration diagnosis independent of the stack&#x27;s single lowest pixel.</li><li>Before-operation channel minima, medians, and clipped-pixel counts recorded.</li></ul></section>
+<section><h2>What NOVA does</h2><p>NOVA 1.24.7 skips remove_pedestal by default because a global minimum is insufficient evidence. If an operator explicitly forces the current function, it subtracts one global minimum uniformly from every channel and clips only as a numerical safety guard.</p></section>
+<section class="hb-two"><div><h2>Use when</h2><ul><li>Capture or calibration provenance establishes a remaining constant offset.</li><li>A controlled calibration diagnosis supplies the amount and the subtraction can be repeated on the original linear data.</li></ul></div>
+<div><h2>Skip when</h2><ul><li>The only evidence is a positive minimum, median, or visually raised sky floor.</li><li>The image is an ordinary calibrated stack with no documented residual offset.</li><li>The proposed amount is a sky statistic rather than a calibration offset.</li><li>The data are nonlinear or the original calibration products are unavailable.</li></ul></div></section>
+<section class="hb-two"><div><h2>Limits</h2><ul><li>A positive global minimum does not identify an electronic pedestal.</li><li>Post-stack subtraction cannot restore values clipped during calibration.</li><li>Subtracting separate channel minima can alter color balance.</li><li>An output pedestal added during calibration to prevent clipping is not evidence that an arbitrary post-stack floor should be removed.</li></ul></div>
+<div><h2>Scientific and aesthetic notes</h2><ul><li>Sky background is real signal plus noise; forcing its darkest sample to zero is not a calibration measurement.</li><li>Judge this analytically with statistics and provenance, not a before/after beauty slider.</li><li>If calibration clipped negative values, reprocess the subframes with an appropriate calibration-time output pedestal; later addition or subtraction cannot recover clipped structure.</li></ul></div></section>
+<section><h2>Evidence and measurements</h2><table class="hb-diagnostics"><thead><tr><th>Measurements</th><th>Acceptance criteria</th></tr></thead><tbody><tr><td><ul><li>Calibration provenance and the exact asserted offset value.</li><li>Per-channel minimum, median, MAD/sigma, and clipped-pixel fraction before and after.</li><li>Difference image confirming a spatially uniform subtraction.</li></ul></td><td><ul><li>The step remains skipped when no independent pedestal evidence exists.</li><li>When applied, the difference image is spatially constant at the documented amount.</li><li>No material increase in low-clipped pixels occurs.</li><li>Channel-distribution shape and intended color relationships remain intact.</li></ul></td></tr></tbody></table></section>
+<section><h2>Cross-tool matrix</h2><table class="hb-matrix"><thead><tr><th>Tool</th>
+<th>Equivalence</th><th>Expected result</th><th>Evidence</th></tr></thead>
+<tbody><tr><th>nova</th><td>Exact replay</td><td>Only the documented uniform offset moves; channel distributions retain their shape.</td><td>nova-pedestal-source, nova-m66-run-1.24.7</td></tr><tr><th>pixinsight</th><td>Algorithmically equivalent</td><td>A uniform shift by the confirmed amount without distribution-shape or color damage.</td><td>m66-manual-verification</td></tr><tr><th>siril</th><td>Algorithmically equivalent</td><td>Means and medians shift by the scalar while sigma/MAD and distribution shape remain stable.</td><td>siril-calibration-1.4.4, m66-manual-verification</td></tr><tr><th>saspro</th><td>No direct equivalent</td><td>A calibrated linear stack enters SASpro without an undocumented black-level shift.</td><td>unverified</td></tr></tbody></table></section>
+<section class="hb-tool"><h2>nova <small>1.24.7</small></h2><p><b>Host:</b> NOVA Python pipeline</p><ol><li>Inspect capture and calibration provenance for an explicitly documented remaining constant offset.</li><li>Leave the step skipped when that evidence is absent; this is the default.</li><li>If force_apply is authorized from real provenance, record the input, uniform amount, and before/after channel statistics.</li></ol><h3>Controls and starting ranges</h3><dl class="hb-controls"><dt>default action</dt><dd>skip</dd><dt>force_apply</dt><dd>false; true only with documented calibration evidence</dd><dt>subtraction amount</dt><dd>the confirmed offset; never infer from global minimum alone</dd></dl><p><b>Mask behavior:</b> No mask: a true constant offset is a full-image calibration property.</p><h3>Failure modes</h3><ul><li>A single cold pixel determines the amount.</li><li>Legitimate sky background is forced to zero.</li><li>Shadow clipping increases or channel balance changes.</li></ul><h3>Recovery</h3><ul><li>Revert to the unchanged linear input.</li><li>Recalibrate from subframes when the failure originated during calibration.</li></ul></section><section class="hb-tool"><h2>pixinsight <small>M66 validation environment; exact version not recorded</small></h2><p><b>Host:</b> PixInsight PixelMath</p><ol><li>Confirm a residual uniform offset from calibration provenance; otherwise skip.</li><li>In PixelMath subtract that measured scalar from $T with rescaling disabled.</li><li>Apply consistently to the intended channels and inspect Statistics before and after for minima, medians, and clipping.</li></ol><h3>Controls and starting ranges</h3><dl class="hb-controls"><dt>expression</dt><dd>$T - confirmed_offset</dd><dt>rescale result</dt><dd>disabled</dd><dt>offset</dt><dd>measured calibration value; no generic starting number</dd></dl><p><b>Mask behavior:</b> No mask for a confirmed full-frame constant offset.</p><h3>Failure modes</h3><ul><li>Using min($T) as proof instead of merely as arithmetic.</li><li>Using a sky median as the offset.</li><li>Per-channel subtraction changes color balance.</li></ul><h3>Recovery</h3><ul><li>Undo and return to the original linear image; recalibrate if clipping occurred earlier.</li></ul></section><section class="hb-tool"><h2>siril <small>1.4.2 manual test; 1.4.4 calibration reference</small></h2><p><b>Host:</b> Siril Pixel Math and calibration</p><ol><li>Prefer correct bias/dark/flat calibration and inspect the calibration statistics before considering a later subtraction.</li><li>Skip post-stack subtraction unless provenance confirms a residual offset.</li><li>For the demonstrated manual arithmetic, subtract one confirmed scalar in Pixel Math and compare channel statistics before and after.</li></ol><h3>Controls and starting ranges</h3><dl class="hb-controls"><dt>post-stack scalar</dt><dd>confirmed offset only; no generic starting number</dd><dt>display normalization</dt><dd>disabled while comparing numeric statistics</dd></dl><p><b>Mask behavior:</b> No mask for calibration-wide offset handling.</p><h3>Failure modes</h3><ul><li>Treating the lowest channel minimum as an identified pedestal.</li><li>Clamping a large part of the real sky background to zero.</li></ul><h3>Recovery</h3><ul><li>Undo; return to the calibrated linear input and diagnose the calibration chain.</li></ul></section><section class="hb-tool"><h2>saspro <small>not established for this operation</small></h2><p><b>Host:</b> Seti Astro Suite Pro</p><ol><li>Do not invent a SASpro post-stack pedestal-removal equivalent.</li><li>Handle the calibration diagnosis in a calibration-capable tool and import the resulting clean linear stack.</li></ol><h3>Controls and starting ranges</h3><p class="empty">No fixed starting range is claimed.</p><p><b>Mask behavior:</b> Not applicable.</p><h3>Failure modes</h3><ul><li>Assuming a general black-point or PixelMath operation proves calibration equivalence.</li></ul><h3>Recovery</h3><ul><li>Return to the calibration-capable source tool and preserve the original stack.</li></ul></section>
+<section><h2>Validation status</h2><p><strong class="hb-validation">Not yet Henry-validated.</strong> Use this as sourced guidance, not a certification.</p></section>
+<section><h2>Sources</h2><ul><li>M66 manual recipe verification feedback <code>M66_Manual_Recipe_Verification_Feedback.md</code> — Henry validated</li><li>NOVA pedestal implementation and conditional gate <code>nas_server/seti_astro.py:3096; nas_server/auto_process.py:655</code> — NOVA source-confirmed</li><li>M66 workflow 1.24.7 execution record <code>critiques/20260802_045251_seestar_galaxy.json</code> — NOVA execution record</li><li><a href="https://siril.readthedocs.io/en/stable/preprocessing/calibration.html">Siril 1.4.4 calibration documentation</a> — Vendor-documented</li></ul></section>
+<section><h2>Related evidence</h2>
+<p>The M66 recipe and Henry-validation ledger will link here when their static
+exports are available. Until then, this article remains explicitly unvalidated.</p></section>
+<script>
+document.querySelectorAll('.ba-slider').forEach(function(s) {
+  var r = s.querySelector('.ba-range');
+  var b = s.querySelector('.ba-before');
+  var d = s.querySelector('.ba-divider');
+  r.addEventListener('input', function() {
+    var pct = this.value;
+    b.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+    d.style.left = pct + '%';
+  });
+});
+</script>
+</main><footer>NOVA — Autonomous Processing Engine · every image processed and
+graded by the AI itself · <a href="https://github.com/measurethepixels/nova">code</a> · <a href="https://www.youtube.com/@measurethepixels">episodes</a>
+<div class="tag" style="margin-top:.6rem">Measure the pixels. Make the call.</div>
+</footer></body></html>

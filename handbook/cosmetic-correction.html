@@ -1,0 +1,105 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/"><title>Cosmetic Correction — NOVA Handbook</title><style>
+:root{--bg:#0a0c10;--card:#12161d;--border:#2a313b;--text:#e6edf3;--mute:#8b949e;
+--accent:#5a96ff;--gold:#d2a528}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+nav{position:sticky;top:0;background:rgba(10,12,16,.92);backdrop-filter:blur(8px);
+border-bottom:1px solid var(--border);padding:.7rem 1.2rem;display:flex;gap:1.2rem;
+align-items:center;z-index:10}
+nav .brand{font-weight:700;color:var(--text)}
+main{max-width:1200px;margin:0 auto;padding:2rem 1.2rem}
+.hero{text-align:center;padding:3.5rem 1rem 2.5rem}
+.hero h1{font-size:2.6rem;letter-spacing:.5px}
+.hero p.sub{color:var(--mute);font-size:1.15rem;margin-top:.4rem}
+.hero p.tag{color:var(--accent);font-weight:600;margin-top:1rem}
+.btns{margin-top:1.4rem;display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.btn{border:1px solid var(--border);background:var(--card);padding:.55rem 1.1rem;
+border-radius:8px;color:var(--text);font-weight:600}
+.btn.primary{background:#1450b8;border-color:#1450b8}
+.notice{max-width:820px;margin:0 auto 1.4rem;padding:.9rem 1rem;text-align:left;
+background:#141b27;border:1px solid #35527a;border-radius:10px;color:#c9d7ea}
+.notice strong{color:#e6edf3}.notice a{font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:1.4rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.card .meta{padding:.55rem .8rem;display:flex;justify-content:space-between;align-items:center}
+.card .t{font-weight:600}.card .s{color:var(--gold);font-family:ui-monospace,monospace}
+h2{margin:2.2rem 0 .6rem;font-size:1.5rem}
+.prose{max-width:760px}.prose p{margin:.8rem 0}.prose li{margin:.35rem 0 .35rem 1.2rem}
+.prose h2{margin-top:2rem}.prose h3{margin:1.4rem 0 .4rem}
+.prose code{background:var(--card);border:1px solid var(--border);padding:.1rem .35rem;border-radius:5px;font-size:.9em}
+footer{border-top:1px solid var(--border);margin-top:3rem;padding:2rem 1.2rem;
+text-align:center;color:var(--mute)}
+footer .tag{color:var(--accent);font-weight:600}
+
+.hb-head{max-width:850px;margin:0 auto 1.5rem}.hb-head p{color:var(--text2,var(--mute))}
+.hb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.hb-card,.hb-tool{border:1px solid var(--border);border-radius:10px;padding:1rem;background:var(--bg2,var(--card))}
+.hb-card h2,.hb-tool h2{margin-top:0}.hb-card span,.hb-head span,.hb-tool small{color:var(--text2,var(--mute))}
+.hb-two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.hb-matrix,.hb-diagnostics{width:100%;border-collapse:collapse}
+.hb-matrix th,.hb-matrix td,.hb-diagnostics th,.hb-diagnostics td{padding:.55rem;border:1px solid var(--border);vertical-align:top;text-align:left}
+.hb-tool{margin:1rem 0}.hb-tool ol,.hb-tool ul,section ul{padding-left:1.3rem}
+.hb-controls{display:grid;grid-template-columns:minmax(10rem,1fr) 2fr;gap:.35rem 1rem}
+.hb-controls dt{font-weight:700}.hb-controls dd{margin:0}.empty{color:var(--text2,var(--mute))}
+.hb-validation{color:var(--gold,#d2a528)}.hb-validated{color:#43c97b}
+@media(max-width:720px){.hb-two{grid-template-columns:1fr}.hb-matrix{font-size:.8rem}}
+
+.ba-slider { position: relative; overflow: hidden; border-radius: 8px; cursor: ew-resize;
+             user-select: none; border: 1px solid var(--border); }
+.ba-slider .ba-after { display: block; width: 100%; }
+.ba-slider .ba-before { position: absolute; top: 0; left: 0; width: 100%;
+                        clip-path: inset(0 50% 0 0); pointer-events: none; }
+.ba-slider .ba-divider { position: absolute; top: 0; left: 50%; width: 2px; height: 100%;
+                         background: rgba(255,255,255,.8); pointer-events: none;
+                         transform: translateX(-50%); }
+.ba-slider .ba-lbl { position: absolute; top: 8px; background: rgba(0,0,0,.65); color: #fff;
+                     font-size: .62rem; padding: 1px 6px; border-radius: 3px;
+                     pointer-events: none; letter-spacing: .05em; text-transform: uppercase; }
+.ba-slider .ba-lbl-l { left: 8px; }
+.ba-slider .ba-lbl-r { right: 8px; }
+.ba-slider .ba-range { position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                       opacity: 0; cursor: ew-resize; margin: 0; }
+.ba-cap { font-size: .76rem; color: var(--text2); margin-top: .4rem; font-style: italic; }
+</style></head><body><nav><span class="brand">Measure the Pixels</span>
+<a href="index.html">Home</a><a href="gallery.html">Gallery</a>
+<a href="changelog.html">Changelog</a><a href="about.html">About</a>
+<a href="handbook/index.html">Handbook</a>
+<a href="https://www.youtube.com/@measurethepixels">YouTube</a><a href="https://github.com/measurethepixels/nova">Code</a></nav><main>
+<p><a href="handbook/index.html">← Handbook</a></p>
+<header class="hb-head"><h1>Cosmetic Correction</h1><p>Identify and replace isolated defective pixels or very small residual defects without treating stars, compact structure, or ordinary noise as defects.</p>
+<span>schema 1 · revision 1</span></header>
+<section><h2>Recognize it</h2><ul><li>Stable hot or cold pixels recur at sensor coordinates in calibrated subframes.</li><li>Sparse one-pixel colored specks survive integration and become conspicuous after stretch.</li><li>Impulse defects would bias later denoise or sharpening operations.</li></ul></section>
+<section><h2>Intended output</h2><p>Calibrated subframes corrected from a master-dark or bad-pixel map when possible; otherwise a documented sparse residual cleanup whose corrected-pixel count and star preservation have been checked.</p></section>
+<section><h2>Required input state</h2><ul><li>Prefer calibrated, pre-registration subframes plus a matching master-dark or bad-pixel map.</li><li>For residual post-stack cleanup, use a linear integrated image and a sparse-defect hypothesis.</li><li>Record CFA/debayer state because CFA-aware detection differs from RGB-image correction.</li></ul></section>
+<section><h2>What NOVA does</h2><p>NOVA&#x27;s post-stack residual cleanup operates per channel with a 5x5 local median, flags absolute residuals above 5 times the median absolute residual, keeps only connected components of at most three pixels, and replaces them with the local median.</p></section>
+<section class="hb-two"><div><h2>Use when</h2><ul><li>A master-dark or bad-pixel map identifies repeatable sensor defects before integration.</li><li>A linear stack contains sparse, isolated residual hot/cold pixels that survived rejection.</li></ul></div>
+<div><h2>Skip when</h2><ul><li>The candidate defects form stars, compact target structure, trails, or extended regions.</li><li>The correction count or fraction is unexpectedly large.</li><li>Blink/difference inspection shows real signal changing.</li></ul></div></section>
+<section class="hb-two"><div><h2>Limits</h2><ul><li>Ordinary cosmetic correction does not repair gradients, broad artifacts, trails, or bad calibration.</li><li>Post-integration cleanup is not equivalent to correcting every calibrated subframe before registration and stacking.</li><li>Aggressive thresholds can replace star cores and real compact structure.</li></ul></div>
+<div><h2>Scientific and aesthetic notes</h2><ul><li>Pre-integration correction preserves the stacking engine&#x27;s opportunity to reject and weight data correctly.</li><li>A successful tool execution proves procedure, not that the chosen stage or threshold was appropriate.</li><li>Judge sparse defects at native scale and inspect a difference image; a full-frame beauty slider can hide one-pixel damage.</li></ul></div></section>
+<section><h2>Evidence and measurements</h2><div class="ba-slider"><img class="ba-after" src="handbook/img/cosmetic_after.jpg" alt="after cosmetic correction before and after" loading="lazy"><img class="ba-before" src="handbook/img/cosmetic_before.jpg" alt="before cosmetic correction before and after" loading="lazy"><div class="ba-divider"></div><span class="ba-lbl ba-lbl-l">before</span><span class="ba-lbl ba-lbl-r">after</span><input type="range" class="ba-range" value="50" min="0" max="100"></div><div class="ba-cap">cosmetic correction before and after</div></section>
+<section><h2>Cross-tool matrix</h2><table class="hb-matrix"><thead><tr><th>Tool</th>
+<th>Equivalence</th><th>Expected result</th><th>Evidence</th></tr></thead>
+<tbody><tr><th>nova</th><td>Exact replay</td><td>Only isolated components of at most three flagged pixels are replaced by local medians.</td><td>nova-cosmetic-source</td></tr><tr><th>pixinsight</th><td>Functional alternative</td><td>Repeatable isolated defects disappear from subframes without changing stellar profiles.</td><td>m66-manual-verification</td></tr><tr><th>siril</th><td>Functional alternative</td><td>Sparse hot/cold pixels are replaced; M66 reported 13 corrected pixels with no obvious broad change.</td><td>siril-calibration-1.4.4, siril-cosmetic-1.4.4, m66-manual-verification</td></tr><tr><th>saspro</th><td>No direct equivalent</td><td>SASpro receives a calibrated stack whose sensor defects were already handled upstream.</td><td>unverified</td></tr></tbody></table></section>
+<section class="hb-tool"><h2>nova <small>1.24.7</small></h2><p><b>Host:</b> NOVA Python pipeline</p><ol><li>Run on the linear stack only when sparse residual defects remain after integration.</li><li>Use the standing code and ontology defaults for sigma, odd median-kernel size, and maximum connected-defect size.</li><li>Review pixels_fixed, pct_fixed, a native-scale blink, and a difference image before accepting.</li></ol><h3>Controls and starting ranges</h3><dl class="hb-controls"><dt>sigma</dt><dd>5.0 standing ontology and implementation default</dd><dt>kernel_size</dt><dd>5 pixels, odd; standing ontology and implementation default</dd><dt>max_defect_size</dt><dd>3 connected pixels; standing implementation default</dd></dl><p><b>Mask behavior:</b> No user mask; the connectivity filter is the implementation&#x27;s structural safeguard.</p><h3>Failure modes</h3><ul><li>Threshold is low enough to flag star cores.</li><li>Connected real structure fragments into small flagged islands.</li><li>A large correction fraction is accepted without investigation.</li></ul><h3>Recovery</h3><ul><li>Revert to the unchanged linear input and raise the threshold or correct subframes before integration.</li></ul></section><section class="hb-tool"><h2>pixinsight <small>M66 validation environment; exact version not recorded</small></h2><p><b>Host:</b> PixInsight CosmeticCorrection</p><ol><li>Prefer applying CosmeticCorrection to calibrated subframes before registration and integration.</li><li>Use a master-dark defect list when available; otherwise configure conservative hot/cold detection.</li><li>Inspect the corrected subframes or rejection evidence at native scale before continuing.</li></ol><h3>Controls and starting ranges</h3><dl class="hb-controls"><dt>hot/cold sigma</dt><dd>approximately 3-5 is M66 guidance, not a universal preset</dd><dt>target</dt><dd>calibrated subframes; post-stack M66 execution validated tool operation only</dd></dl><p><b>Mask behavior:</b> Tool-specific defect lists/auto-detection; no handbook claim of ordinary image-mask behavior.</p><h3>Failure modes</h3><ul><li>Using the batch process successfully on an integrated stack and calling the recipe stage validated.</li><li>Thresholds remove faint-star cores or compact detail.</li></ul><h3>Recovery</h3><ul><li>Undo and move the correction to calibrated subframes or use a more conservative defect map.</li></ul></section><section class="hb-tool"><h2>siril <small>1.4.4 reference; M66 standalone test recorded as 1.4.2</small></h2><p><b>Host:</b> Siril calibration or Cosmetic Correction</p><ol><li>During calibration, prefer master-dark sigma detection or a bad-pixel map; enable CFA handling for Bayer data.</li><li>Estimate the corrected count before batch processing; Siril flags estimates above one percent for review.</li><li>For an already debayered residual stack, use the standalone Cosmetic Correction filter with CFA disabled and inspect the reported count.</li></ol><h3>Controls and starting ranges</h3><dl class="hb-controls"><dt>cold sigma</dt><dd>5.00 in the M66 standalone test</dd><dt>hot sigma</dt><dd>5.00 in the M66 standalone test</dd><dt>amount</dt><dd>1.00 in the M66 standalone test</dd><dt>CFA</dt><dd>on only for CFA/Bayer input; off for debayered RGB</dd><dt>review threshold</dt><dd>investigate when the calibration estimate exceeds 1%</dd></dl><p><b>Mask behavior:</b> Siril documents cosmetic correction as full-image sensor-defect processing, not a mask-limited operation.</p><h3>Failure modes</h3><ul><li>CFA state is set incorrectly.</li><li>A high corrected count is accepted without revisiting thresholds or calibration.</li><li>Standalone post-stack cleanup is represented as equivalent to pre-integration correction.</li></ul><h3>Recovery</h3><ul><li>Undo, correct the CFA setting, raise sigma, or return to sequence calibration with a master-dark/bad-pixel map.</li></ul></section><section class="hb-tool"><h2>saspro <small>not established for this operation</small></h2><p><b>Host:</b> Seti Astro Suite Pro</p><ol><li>Do not claim a native SASpro equivalent without current source or tool evidence.</li><li>Perform sensor-defect correction during calibration in Siril or PixInsight before importing the stack.</li></ol><h3>Controls and starting ranges</h3><p class="empty">No fixed starting range is claimed.</p><p><b>Mask behavior:</b> Not applicable.</p><h3>Failure modes</h3><ul><li>Using a generic blemish or denoise operation as an undocumented cosmetic-correction substitute.</li></ul><h3>Recovery</h3><ul><li>Return to the calibrated subframes and a documented calibration-capable tool.</li></ul></section>
+<section><h2>Validation status</h2><p><strong class="hb-validation">Not yet Henry-validated.</strong> Use this as sourced guidance, not a certification.</p></section>
+<section><h2>Sources</h2><ul><li>M66 manual recipe verification feedback <code>M66_Manual_Recipe_Verification_Feedback.md</code> — Henry validated</li><li>NOVA isolated-defect correction implementation and ontology defaults <code>nas_server/seti_astro.py:3133; nas_server/processing_ontology.json:325</code> — NOVA source-confirmed</li><li>M66 workflow 1.24.7 execution record <code>critiques/20260802_045251_seestar_galaxy.json</code> — NOVA execution record</li><li><a href="https://siril.readthedocs.io/en/stable/preprocessing/calibration.html">Siril 1.4.4 calibration documentation</a> — Vendor-documented</li><li><a href="https://siril.readthedocs.io/en/stable/processing/cc.html">Siril 1.4.4 cosmetic correction documentation</a> — Vendor-documented</li></ul></section>
+<section><h2>Related evidence</h2>
+<p>The M66 recipe and Henry-validation ledger will link here when their static
+exports are available. Until then, this article remains explicitly unvalidated.</p></section>
+<script>
+document.querySelectorAll('.ba-slider').forEach(function(s) {
+  var r = s.querySelector('.ba-range');
+  var b = s.querySelector('.ba-before');
+  var d = s.querySelector('.ba-divider');
+  r.addEventListener('input', function() {
+    var pct = this.value;
+    b.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+    d.style.left = pct + '%';
+  });
+});
+</script>
+</main><footer>NOVA — Autonomous Processing Engine · every image processed and
+graded by the AI itself · <a href="https://github.com/measurethepixels/nova">code</a> · <a href="https://www.youtube.com/@measurethepixels">episodes</a>
+<div class="tag" style="margin-top:.6rem">Measure the pixels. Make the call.</div>
+</footer></body></html>
