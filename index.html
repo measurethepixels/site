@@ -60,6 +60,7 @@ h2{font-size:clamp(1.7rem,3vw,2.7rem);margin:2.2rem 0 .75rem}h3{font-size:1.25re
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.5rem}
 .card{grid-column:span 4;background:var(--panel);overflow:hidden}.card:nth-child(5n+1){grid-column:span 8}.card figure{margin:0;position:relative;overflow:hidden}.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .35s ease}.card:hover img{transform:scale(1.015)}
 .card:nth-child(5n+1) img{aspect-ratio:2/1}.card .meta{padding:.85rem 1rem;display:flex;justify-content:space-between;gap:1rem;align-items:baseline}.card .t{margin:0;font:600 1rem/1.3 var(--body);letter-spacing:0}.card .s{color:var(--amber);font:600 .75rem var(--mono)}
+.card-foot{display:flex;align-items:center;min-height:44px;padding:.55rem 1rem;border-top:1px solid var(--line2)}.recipe-link{font:600 .65rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase}
 .prose{max-width:790px}.prose p{margin:.9rem 0}.prose li{margin:.4rem 0 .4rem 1.2rem}.prose h2{margin-top:2.6rem}.prose h3{margin:1.6rem 0 .45rem}.prose code{background:var(--panel);border:1px solid var(--line);padding:.1rem .35rem;border-radius:2px;font-size:.9em}
 .console-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}.console-intro .prose{font-size:1.08rem}.loop{font:600 clamp(1rem,2vw,1.45rem)/1.8 var(--mono);color:var(--blue);border-left:1px solid var(--line);padding-left:2rem}.loop span{color:var(--amber)}
 footer{display:grid;grid-template-columns:1fr auto;gap:1rem;max-width:1280px;margin:4rem auto 0;padding:1.5rem clamp(1rem,3vw,2.2rem) 2.5rem;border-top:1px solid var(--line);color:var(--muted);font:.68rem/1.6 var(--mono);text-transform:uppercase}.footer-tag{color:var(--ink);letter-spacing:.08em}
@@ -82,13 +83,17 @@ records why, and leaves the evidence open for human review.</p>
 <div class="btns"><a class="btn primary" href="gallery.html">Inspect the images →</a>
 <a class="btn" href="https://www.youtube.com/@measurethepixels">Watch the build log ↗</a></div></div><div class="hero-media"><img class="hero-photo" src="img/m-51.jpg" alt="M 51 processed by NOVA"><div class="image-label">Current evidence / M 51</div><img class="nova-star-overlay" src="/nova-star.png" alt=""></div></section>
 <dl class="evidence-strip" style="--evidence-count:4"><div class="evidence-item"><dt>Target</dt><dd>M 51</dd></div><div class="evidence-item"><dt>Class</dt><dd>Spiral galaxy</dd></div><div class="evidence-item"><dt>Engine</dt><dd>NOVA</dd></div><div class="evidence-item"><dt>Assessment</dt><dd>9.0 / 10</dd></div></dl>
+<section class="start-here"><div class="section-head"><h2>Start here</h2></div>
+<p class="section-intro">A SeeStar S50 is a compact robotic telescope. Capturing the
+photons is only the first half; NOVA measures and automates the difficult processing
+decisions that turn stacked data into a finished image.</p></section>
 <section class="entry-points"><div class="section-head"><h2>One project. Four ways in.</h2></div>
 <p class="section-intro">The photographs are the result. The measurements explain
 the result. The handbook shares the method. The build log shows what failed and changed.</p>
 <div class="door-grid">
 <a class="door" href="gallery.html"><h3>Images</h3><p>Finished astrophotography with NOVA's recorded assessment.</p></a>
 <a class="door" href="about.html"><h3>NOVA</h3><p>The architecture, decision loop, validation, and limits of the system.</p></a>
-<a class="door" href="handbook/index.html"><h3>Handbook</h3><p>Process-first guidance across tools, with sources and validation status.</p></a>
+<a class="door" href="handbook/index.html"><h3>Handbook</h3><p>A growing process-first reference: two published methods, with sources and validation status.</p></a>
 <a class="door" href="changelog.html"><h3>Build Log</h3><p>Experiments, mistakes, decisions, and the measurements that changed NOVA.</p></a>
 </div></section>
 <div class="notice"><strong>Public preview:</strong> the images, processing history,
@@ -102,22 +107,22 @@ before NOVA is presented as a supported release.</div>
 <div class="meta"><h2 class="t">NGC 2244 Satellite Cluster</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 8.5</span></div></article><article class="card"><figure><img src="img/m-31.jpg" alt="M 31" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 31</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.4</span></div></article><article class="card"><figure><img src="img/m-101.jpg" alt="M 101" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 101</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/m-45.jpg" alt="M 45" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 45</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/m-42.jpg" alt="M 42" loading="lazy"></figure>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.4</span></div></article><article class="card"><figure><img src="img/m-42.jpg" alt="M 42" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 42</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/ic-1805.jpg" alt="IC 1805" loading="lazy"></figure>
 <div class="meta"><h2 class="t">IC 1805</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/m-66.jpg" alt="M 66" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 66</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-13.jpg" alt="M 13" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 13</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/ngc-2359.jpg" alt="NGC 2359" loading="lazy"></figure>
-<div class="meta"><h2 class="t">NGC 2359</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/sh-2-298.jpg" alt="SH 2-298" loading="lazy"></figure>
-<div class="meta"><h2 class="t">SH 2-298</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/m-101.jpg" alt="M 101" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 101</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/m-45.jpg" alt="M 45" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 45</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/m-27.jpg" alt="M 27" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 27</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-83.jpg" alt="M 83" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 83</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/ngc-7635.jpg" alt="NGC 7635" loading="lazy"></figure>
+<div class="meta"><h2 class="t">NGC 7635</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-81.jpg" alt="M 81" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 81</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article></div></section></main><footer><div>NOVA / bounded decisions · recorded evidence · human review<br>
 <a href="https://github.com/measurethepixels/nova">GitHub</a> · <a href="https://www.youtube.com/@measurethepixels">YouTube</a></div>
 <div class="footer-tag">Measure the pixels. Make the call.</div></footer></body></html>
