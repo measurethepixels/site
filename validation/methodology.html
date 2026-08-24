@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NOVA — Measure the Pixels</title><meta name="description" content="See how NOVA measures images, makes bounded processing decisions, records evidence, and keeps Jeff in control."><meta name="theme-color" content="#f4f0e6"><meta property="og:type" content="website"><meta property="og:site_name" content="Measure the Pixels"><meta property="og:title" content="NOVA — Measure the Pixels"><meta property="og:description" content="See how NOVA measures images, makes bounded processing decisions, records evidence, and keeps Jeff in control."><meta property="og:image" content="https://measurethepixels.com/social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/nova-star.png" type="image/png"><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/"><title>Validation methodology — NOVA</title><meta name="description" content="NOVA measures, processes, and explains deep-sky images."><meta name="theme-color" content="#f4f0e6"><meta property="og:type" content="website"><meta property="og:site_name" content="Measure the Pixels"><meta property="og:title" content="Validation methodology — NOVA"><meta property="og:description" content="NOVA measures, processes, and explains deep-sky images."><meta property="og:image" content="https://measurethepixels.com/social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/nova-star.png" type="image/png"><style>
 @font-face{font-family:"IBM Plex Sans";src:url("/fonts/IBMPlexSans-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:"IBM Plex Sans Condensed";src:url("/fonts/IBMPlexSansCondensed-SemiBold.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
 @font-face{font-family:"IBM Plex Sans Condensed";src:url("/fonts/IBMPlexSansCondensed-Bold.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap}
@@ -69,6 +69,15 @@ footer{display:grid;grid-template-columns:1fr auto;gap:1rem;max-width:1280px;mar
 @media(max-width:560px){body:before{background-size:48px 48px}.site-nav{padding:.65rem 1rem;gap:.25rem 1rem}.utility-nav{display:none}.primary-nav{gap:1rem}.primary-nav a{display:inline-flex;align-items:center;min-height:44px}main{padding-top:1rem}.hero-copy{padding:.25rem 0 .9rem}.hero-copy h1{font-size:clamp(2.55rem,15vw,3.45rem);margin:.05em 0}.hero-copy .sub{margin:.65rem 0;font-size:1.08rem}.hero-copy .intro{margin:.5rem 0;font-size:.94rem;line-height:1.5}.btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;margin-top:.85rem}.btn{justify-content:center;padding:.45rem .55rem;font-size:.66rem;text-align:center}.hero-media{min-height:68vw}.entry-points .section-head{margin-top:2.6rem}.entry-points .section-intro{font-size:.96rem;line-height:1.5}.door-grid{grid-template-columns:1fr;margin-top:1rem}.door{display:grid;grid-template-columns:minmax(6.5rem,.32fr) 1fr;gap:.8rem;align-items:center;min-height:104px;padding:.9rem 1rem}.door h3{margin:0;font-size:1.35rem}.door p{margin:0;font-size:.88rem;line-height:1.4}.card,.card:nth-child(5n+1){grid-column:1/-1}.evidence-strip{grid-template-columns:1fr 1fr}.evidence-item dd{font-size:.68rem}footer{grid-template-columns:1fr}}
 @media(max-width:340px){.btns{grid-template-columns:1fr}.door{grid-template-columns:1fr;gap:.25rem}.door h3{font-size:1.25rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card img{transition:none}}
+
+.val-head{max-width:850px;margin:0 auto 1.5rem}.val-head p{color:var(--text2,var(--mute))}
+.val-matrix{width:100%;border-collapse:collapse;margin:1rem 0}
+.val-matrix th,.val-matrix td{padding:.55rem;border:1px solid var(--border);vertical-align:top;text-align:left}
+.val-badge{display:inline-block;padding:.15rem .5rem;border-radius:4px;font-size:.85em}
+.val-validated{color:#43c97b}.val-partial{color:#d2a528}.val-stale{color:#d2a528}
+.val-failed{color:#e05555}.val-unvalidated{color:var(--text2,var(--mute))}
+.empty{color:var(--text2,var(--mute))}
+@media(max-width:720px){.val-matrix{font-size:.8rem}}
 </style></head><body><!-- impeccable-direction
 THESIS: Real image evidence leads; refuse the generic centered AI-product hero.
 OWN-WORLD: Warm observatory paper, charcoal ink, hairline rules, amber instrument marks, condensed editorial type, and flat measured panels.
@@ -76,37 +85,24 @@ STORY: See the result, understand NOVA's bounded loop, inspect its method, then 
 FIRST VIEWPORT: A compact thesis and action occupy the left third; the current real image dominates the right; its measured facts form the baseline.
 FORM: Scientific editorial field note, pinned by Jeff as Observatory Notebook meets modern engineering lab.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
---><a class="skip-link" href="#content">Skip to content</a><nav class="site-nav" aria-label="Primary"><a class="brand" href="index.html"><img class="brand-mark" src="/nova-star.png" alt="">Measure the Pixels</a><div class="primary-nav"><a href="gallery.html">Images</a><a href="about.html" aria-current="page">NOVA</a><a href="handbook/index.html">Handbook</a><a href="validation/index.html">Validation</a><a href="changelog.html">Build Log</a></div><div class="utility-nav"><a href="https://www.youtube.com/@measurethepixels">YouTube ↗</a><a href="https://github.com/measurethepixels/nova">GitHub ↗</a></div></nav><main id="content"><h1>Measured decisions.<br>Inspectable evidence.</h1>
-<div class="console-intro"><div class="prose">
-<p><b>Measure the Pixels</b> documents the building of an AI astrophotographer.
-The star of the show is <b>NOVA</b> — an autonomous processing engine that takes
-raw telescope data from a SeeStar S50 and does everything a human astrophotographer
-would: stacking, gradient removal, color calibration, deconvolution, stretching,
-and recording its assessment. It explains every decision with the numbers that drove it.</p>
-<p>The human behind it is Jeff Henry — the builder. He engineers the system with AI
-development tools, points the telescope, tests the results, and owns the final say.
-NOVA processes; Jeff engineers.</p></div>
-<div class="loop"><span>01</span> MEASURE<br><span>02</span> TRY<br><span>03</span> MEASURE AGAIN<br><span>04</span> ADJUST<br><span>05</span> RECORD THE EVIDENCE</div></div>
-<div class="prose">
-<h3>The philosophy</h3>
-<p>Every decision follows one loop: <b>measure → try → measure → adjust</b>. No
-step is accepted because it "looks right" — the pixels are measured before and
-after, guards veto artifacts that fool the metrics, and every pipeline change is
-versioned with the evidence that justified it (see the changelog).</p>
-<h3>Run it yourself</h3>
-<div class="notice"><strong>Preliminary public preview:</strong> the source is
-available, but the clean-install documentation, configuration contract, sample
-data, and verification tooling are still being formalized. A verified tagged
-release and filmed AI-assisted installation walkthrough are planned.</div>
-<p>There will not be a one-size-fits-all installer: each deployment is a port to
-its operating system, storage, and astronomy tools. Until the verified release is
-published, treat <a href="https://github.com/measurethepixels/nova">the repository</a> as an active development preview,
-not a supported quickstart.</p>
-<h3>Links</h3><ul>
-<li><a href="https://www.youtube.com/@measurethepixels">YouTube — the episodes</a></li>
-<li><a href="https://github.com/measurethepixels/nova">GitHub — NOVA's source</a></li>
-<li><a href="mailto:hello@measurethepixels.com">Contact — hello@measurethepixels.com</a></li>
-</ul>
-</div></main><footer><div>NOVA / bounded decisions · recorded evidence · human review<br>
+--><a class="skip-link" href="#content">Skip to content</a><nav class="site-nav" aria-label="Primary"><a class="brand" href="index.html"><img class="brand-mark" src="/nova-star.png" alt="">Measure the Pixels</a><div class="primary-nav"><a href="gallery.html">Images</a><a href="about.html">NOVA</a><a href="handbook/index.html">Handbook</a><a href="validation/index.html" aria-current="page">Validation</a><a href="changelog.html">Build Log</a></div><div class="utility-nav"><a href="https://www.youtube.com/@measurethepixels">YouTube ↗</a><a href="https://github.com/measurethepixels/nova">GitHub ↗</a></div></nav><main id="content">
+<p><a href="validation/index.html">← Validation ledger</a></p>
+<header class="val-head"><h1>Validation methodology</h1>
+<p>Every entry in the ledger is one dated, attributed event tied to a specific claim
+and tool identity — never an unattributed checkmark. A claim's current status is
+derived fresh from its event history each time the ledger is rendered.</p></header>
+<section><h2>Validation levels</h2>
+<p>A generic pass is insufficient. Each event records which of these independent
+dimensions were actually checked:</p>
+<table class="val-matrix"><tr><th>Procedure</th><td>The described steps were actually followed in the tool.</td></tr><tr><th>Parameters</th><td>The specific settings/values used were recorded, not just the operation.</td></tr><tr><th>State</th><td>Measured before/after image state (statistics) confirmed the change.</td></tr><tr><th>Artifact</th><td>A retained output file was inspected, not just an on-screen preview.</td></tr><tr><th>Behavior</th><td>The result&#x27;s behavior (e.g. non-regression) was checked against expectations.</td></tr><tr><th>Equivalence</th><td>The result was compared against a reference for how closely it matches.</td></tr><tr><th>Acceptance</th><td>The result was judged against an explicit acceptance criterion.</td></tr></table></section>
+<section><h2>Status meanings</h2>
+<table class="val-matrix"><tr><th>Jeff-validated</th><td>The most recent event for this claim passed, and the claim has not changed since.</td></tr><tr><th>Partially validated</th><td>The most recent event passed with qualifications, or corrected the claim rather than fully confirming it.</td></tr><tr><th>Stale — needs re-validation</th><td>The claim&#x27;s text has changed since it was last validated; the old event no longer applies.</td></tr><tr><th>Failed validation</th><td>The most recent event recorded a failure.</td></tr><tr><th>Not yet validated</th><td>No conclusive validation event is on record for this claim.</td></tr></table></section>
+<section><h2>Why not a boolean</h2>
+<p>A single "validated: true" flag hides how validated something is, by whom, when,
+and against which version of the claim. This ledger instead keeps every event and
+derives the current status from the latest one — including detecting when the
+underlying claim has since changed (marked stale) rather than silently keeping an
+old stamp current.</p></section>
+</main><footer><div>NOVA / bounded decisions · recorded evidence · human review<br>
 <a href="https://github.com/measurethepixels/nova">GitHub</a> · <a href="https://www.youtube.com/@measurethepixels">YouTube</a></div>
 <div class="footer-tag">Measure the pixels. Make the call.</div></footer></body></html>
