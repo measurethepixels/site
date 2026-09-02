@@ -1,0 +1,168 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/"><title>Stacking, Integration, Weighting, and Rejection — NOVA Handbook</title><meta name="description" content="NOVA measures, processes, and explains deep-sky images."><meta name="theme-color" content="#f4f0e6"><meta property="og:type" content="website"><meta property="og:site_name" content="Measure the Pixels"><meta property="og:title" content="Stacking, Integration, Weighting, and Rejection — NOVA Handbook"><meta property="og:description" content="NOVA measures, processes, and explains deep-sky images."><meta property="og:image" content="https://measurethepixels.com/social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/nova-star.png" type="image/png"><style>
+@font-face{font-family:"IBM Plex Sans";src:url("/fonts/IBMPlexSans-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Sans Condensed";src:url("/fonts/IBMPlexSansCondensed-SemiBold.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"IBM Plex Sans Condensed";src:url("/fonts/IBMPlexSansCondensed-Bold.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url("/fonts/IBMPlexMono-SemiBold.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+:root{--ink:#1d2932;--paper:#f4f0e6;--panel:#ebe5d8;--panel2:#e1d8c7;
+--line:#b9ae9b;--line2:#d9d0c0;--muted:#5d686d;--blue:#255f8e;--amber:#93610d;
+--green:#28694f;--display:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;
+--body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+--mono:"IBM Plex Mono","SFMono-Regular",Consolas,monospace}
+*{box-sizing:border-box}html{background:var(--paper);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--body)}
+::selection{background:var(--amber);color:var(--paper)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.38;
+background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);
+background-size:72px 72px;mask-image:linear-gradient(to bottom,#000,transparent 68%);z-index:-1}
+a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{color:var(--ink)}
+a:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+.skip-link{position:fixed;left:1rem;top:1rem;z-index:100;transform:translateY(-180%);padding:.65rem .9rem;background:var(--amber);color:var(--paper);font:700 .75rem/1 var(--mono);text-transform:uppercase}
+.skip-link:focus{transform:none;color:var(--paper)}
+.site-nav{position:sticky;top:0;display:grid;grid-template-columns:minmax(210px,1fr) auto auto;
+align-items:center;gap:1.5rem;padding:.75rem max(1.2rem,calc((100vw - 1280px)/2));background:rgba(244,240,230,.96);
+border-bottom:1px solid var(--line);backdrop-filter:blur(12px);z-index:20}
+.brand{display:inline-flex;align-items:center;color:var(--ink);font:700 .83rem/1 var(--mono);letter-spacing:.12em;text-decoration:none;text-transform:uppercase}
+.brand-mark{display:block;flex:0 0 1.8rem;width:1.8rem;height:1.8rem;margin-right:.55rem;filter:brightness(.34) saturate(.72) contrast(1.45)}
+.primary-nav,.utility-nav{display:flex;align-items:center;gap:1.3rem}.site-nav a{text-decoration:none}
+.primary-nav a{color:var(--muted);font:600 .72rem/1 var(--mono);letter-spacing:.11em;text-transform:uppercase}
+.primary-nav a:hover,.primary-nav a[aria-current="page"]{color:var(--ink)}
+.primary-nav a[aria-current="page"]:after{content:"";display:block;margin-top:.45rem;border-bottom:2px solid var(--amber)}
+.utility-nav{gap:.8rem}.utility-nav a{color:var(--muted);font:500 .68rem/1 var(--mono);text-transform:uppercase}
+main{max-width:1280px;margin:0 auto;padding:clamp(1.4rem,4vw,4rem) clamp(1rem,3vw,2.2rem)}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(2.8rem,7vw,6.8rem);font-weight:700;margin:.15em 0}
+h2{font-size:clamp(1.7rem,3vw,2.7rem);margin:2.2rem 0 .75rem}h3{font-size:1.25rem}
+.section-head{position:relative;border-top:1px solid var(--line);padding-top:1rem;margin-top:4rem}
+.section-head:before{content:"";position:absolute;left:-9px;top:-9px;width:18px;height:18px;background:url("/nova-star.png") center/contain no-repeat}
+.section-head h2{margin:0}.section-intro{max-width:54rem;color:var(--muted);font-size:1.08rem}
+.hero{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(420px,1.28fr);min-height:clamp(520px,65vh,650px);border-bottom:1px solid var(--line)}
+.hero-copy{padding:clamp(1rem,3vw,2.8rem) clamp(1rem,4vw,3.8rem) 2rem 0;align-self:center}
+.hero-copy h1 span{display:block}.hero-copy h1 .measure{font-size:.32em;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.hero-copy .sub{max-width:32rem;font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.45;margin:1.4rem 0;color:var(--ink)}
+.hero-copy .intro{max-width:34rem;color:var(--muted)}
+.hero-media{position:relative;min-height:460px;background:#05090d;overflow:hidden;border-left:1px solid var(--line)}
+.hero-photo{width:100%;height:100%;object-fit:cover;display:block}.hero-media:before,.hero-media:after{content:"";position:absolute;pointer-events:none}
+@media(min-width:851px){.hero-media{max-height:clamp(520px,65vh,650px)}.hero-photo{height:auto;max-height:clamp(520px,65vh,650px)}}
+.hero-media:before{inset:1.2rem;border:1px solid rgba(240,238,231,.34)}
+.hero-media:after{left:50%;top:1.2rem;bottom:1.2rem;border-left:1px solid rgba(240,238,231,.18)}
+.image-label{position:absolute;top:2rem;left:2rem;padding:.45rem .65rem;background:rgba(5,9,13,.82);font:600 .67rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase}
+.nova-star-overlay{position:absolute;right:1.45rem;bottom:1.45rem;width:24px;height:24px;opacity:.78;filter:drop-shadow(0 2px 5px rgba(5,9,13,.55))}
+.evidence-strip{position:relative;display:grid;grid-template-columns:repeat(var(--evidence-count,5),minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(244,240,230,.88)}
+.evidence-strip:before{content:"";position:absolute;left:-9px;top:-9px;width:18px;height:18px;background:url("/nova-star.png") center/contain no-repeat}
+.evidence-item{min-width:0;padding:.8rem 1rem;border-right:1px solid var(--line)}.evidence-item:last-child{border-right:0}
+.evidence-item dt{color:var(--muted);font:500 .58rem/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.evidence-item dd{margin:.3rem 0 0;color:var(--ink);font:600 .76rem/1.3 var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.evidence-item.decision .value{color:var(--green)}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.6rem}.btn{display:inline-flex;align-items:center;min-height:44px;padding:.58rem .85rem;border:1px solid var(--line);border-radius:2px;color:var(--ink);font:600 .7rem/1.2 var(--mono);letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+.btn:hover{background:var(--ink);color:var(--paper)}.btn.primary{border-color:var(--amber);color:var(--amber)}
+.notice{margin:2rem 0;padding:1rem 1.2rem;border:1px solid var(--line);background:var(--panel);color:var(--muted)}.notice strong{color:var(--ink)}
+.door-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:1.5rem}
+.door{min-height:220px;padding:1.4rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;position:relative;background:rgba(235,229,216,.72)}
+.door:hover{background:var(--panel2);color:var(--ink)}.door .num{color:var(--amber);font:600 .65rem var(--mono)}.door h3{font-size:2rem;margin:2.3rem 0 .6rem}.door p{max-width:28rem;color:var(--muted)}.door .arrow{position:absolute;right:1.4rem;top:1.2rem;color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.5rem}
+.card{grid-column:span 4;background:var(--panel);overflow:hidden}.card:nth-child(5n+1){grid-column:span 8}.card figure{margin:0;position:relative;overflow:hidden}.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .35s ease}.card:hover img{transform:scale(1.015)}
+.card:nth-child(5n+1) img{aspect-ratio:2/1}.card .meta{padding:.85rem 1rem;display:flex;justify-content:space-between;gap:1rem;align-items:baseline}.card .t{margin:0;font:600 1rem/1.3 var(--body);letter-spacing:0}.card .s{color:var(--amber);font:600 .75rem var(--mono)}
+.card-foot{display:flex;align-items:center;min-height:44px;padding:.55rem 1rem;border-top:1px solid var(--line2)}.recipe-link{font:600 .65rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.prose{max-width:790px}.prose p{margin:.9rem 0}.prose li{margin:.4rem 0 .4rem 1.2rem}.prose h2{margin-top:2.6rem}.prose h3{margin:1.6rem 0 .45rem}.prose code{background:var(--panel);border:1px solid var(--line);padding:.1rem .35rem;border-radius:2px;font-size:.9em}
+.console-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}.console-intro .prose{font-size:1.08rem}.loop{font:600 clamp(1rem,2vw,1.45rem)/1.8 var(--mono);color:var(--blue);border-left:1px solid var(--line);padding-left:2rem}.loop span{color:var(--amber)}
+footer{display:grid;grid-template-columns:1fr auto;gap:1rem;max-width:1280px;margin:4rem auto 0;padding:1.5rem clamp(1rem,3vw,2.2rem) 2.5rem;border-top:1px solid var(--line);color:var(--muted);font:.68rem/1.6 var(--mono);text-transform:uppercase}.footer-tag{color:var(--ink);letter-spacing:.08em}
+@media(max-width:850px){.site-nav{grid-template-columns:1fr auto}.primary-nav{grid-column:1/-1;grid-row:2;overflow:auto;padding:.3rem 0}.utility-nav{justify-self:end}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding-right:0}.hero-media{border-left:0;border-top:1px solid var(--line);min-height:58vw}.card,.card:nth-child(5n+1){grid-column:span 6}.card:nth-child(5n+1) img{aspect-ratio:4/3}.console-intro{grid-template-columns:1fr}.loop{border-left:0;border-top:1px solid var(--line);padding:1.3rem 0 0}.evidence-strip{grid-template-columns:repeat(2,1fr)}.evidence-item{border-bottom:1px solid var(--line)} }
+@media(max-width:560px){body:before{background-size:48px 48px}.site-nav{padding:.65rem 1rem;gap:.25rem 1rem}.utility-nav{display:none}.primary-nav{gap:1rem}.primary-nav a{display:inline-flex;align-items:center;min-height:44px}main{padding-top:1rem}.hero-copy{padding:.25rem 0 .9rem}.hero-copy h1{font-size:clamp(2.55rem,15vw,3.45rem);margin:.05em 0}.hero-copy .sub{margin:.65rem 0;font-size:1.08rem}.hero-copy .intro{margin:.5rem 0;font-size:.94rem;line-height:1.5}.btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;margin-top:.85rem}.btn{justify-content:center;padding:.45rem .55rem;font-size:.66rem;text-align:center}.hero-media{min-height:68vw}.entry-points .section-head{margin-top:2.6rem}.entry-points .section-intro{font-size:.96rem;line-height:1.5}.door-grid{grid-template-columns:1fr;margin-top:1rem}.door{display:grid;grid-template-columns:minmax(6.5rem,.32fr) 1fr;gap:.8rem;align-items:center;min-height:104px;padding:.9rem 1rem}.door h3{margin:0;font-size:1.35rem}.door p{margin:0;font-size:.88rem;line-height:1.4}.card,.card:nth-child(5n+1){grid-column:1/-1}.evidence-strip{grid-template-columns:1fr 1fr}.evidence-item dd{font-size:.68rem}footer{grid-template-columns:1fr}}
+@media(max-width:340px){.btns{grid-template-columns:1fr}.door{grid-template-columns:1fr;gap:.25rem}.door h3{font-size:1.25rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card img{transition:none}}
+
+.hb-head{max-width:850px;margin:0 auto 1.5rem}.hb-head p{color:var(--text2,var(--mute))}
+.hb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.hb-card{border:1px solid var(--border);border-radius:10px;padding:1rem;background:var(--bg2,var(--card))}
+.hb-card h2{margin-top:0}.hb-card span,.hb-head span{color:var(--text2,var(--mute))}
+.hb-two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.hb-matrix,.hb-diagnostics{width:100%;border-collapse:collapse}
+.hb-matrix th,.hb-matrix td,.hb-diagnostics th,.hb-diagnostics td{padding:.55rem;border:1px solid var(--border);vertical-align:top;text-align:left}
+.hb-variant{margin:0 0 1.1rem}.hb-variant:last-child{margin-bottom:0}
+.hb-variant+.hb-variant{padding-top:1.1rem;border-top:1px dashed var(--border)}
+.hb-variant h3{margin:0 0 .5rem}.hb-variant h3 small{color:var(--text2,var(--mute));font-weight:400}
+.hb-variant h4{margin:.8rem 0 .3rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;opacity:.85}
+.hb-variant ol,.hb-variant ul,section ul{padding-left:1.3rem}
+.hb-controls{display:grid;grid-template-columns:minmax(10rem,1fr) 2fr;gap:.35rem 1rem}
+.hb-controls dt{font-weight:700}.hb-controls dd{margin:0}.empty{color:var(--text2,var(--mute))}
+.hb-validation{color:var(--gold,#d2a528)}.hb-validated{color:#43c97b}
+.hb-foundations{margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.hb-foundation-card{border-color:var(--gold,#d2a528)}.hb-claim span{color:var(--text2,var(--mute));font-size:.85rem}
+@media(max-width:720px){.hb-two{grid-template-columns:1fr}.hb-matrix{font-size:.8rem}}
+
+.tools .ttabs{display:flex;gap:4px;margin-bottom:8px;flex-wrap:wrap}
+.ttab{background:rgba(128,128,128,.12);border:1px solid rgba(128,128,128,.3);
+  color:inherit;padding:5px 12px;border-radius:7px 7px 0 0;cursor:pointer;font-size:.85rem}
+.ttab.active{background:rgba(88,166,255,.18);border-color:rgba(88,166,255,.5);color:#58a6ff}
+.tpane{display:none;font-size:.9rem;line-height:1.5;background:rgba(0,0,0,.15);
+  padding:12px 14px;border-radius:0 8px 8px 8px}
+.tpane.active{display:block}
+.tpane ol{margin:.3rem 0 .3rem 1.1rem}.tpane li{margin:.25rem 0}
+.tpane code{background:rgba(128,128,128,.2);padding:1px 5px;border-radius:4px}
+
+.ba-slider { position: relative; overflow: hidden; border-radius: 8px; cursor: ew-resize;
+             user-select: none; border: 1px solid var(--border); }
+.ba-slider .ba-after { display: block; width: 100%; }
+.ba-slider .ba-before { position: absolute; top: 0; left: 0; width: 100%;
+                        clip-path: inset(0 50% 0 0); pointer-events: none; }
+.ba-slider .ba-divider { position: absolute; top: 0; left: 50%; width: 2px; height: 100%;
+                         background: rgba(255,255,255,.8); pointer-events: none;
+                         transform: translateX(-50%); }
+.ba-slider .ba-lbl { position: absolute; top: 8px; background: rgba(0,0,0,.65); color: #fff;
+                     font-size: .62rem; padding: 1px 6px; border-radius: 3px;
+                     pointer-events: none; letter-spacing: .05em; text-transform: uppercase; }
+.ba-slider .ba-lbl-l { left: 8px; }
+.ba-slider .ba-lbl-r { right: 8px; }
+.ba-slider .ba-range { position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                       opacity: 0; cursor: ew-resize; margin: 0; }
+.ba-cap { font-size: .76rem; color: var(--text2); margin-top: .4rem; font-style: italic; }
+</style></head><body><!-- impeccable-direction
+THESIS: Real image evidence leads; refuse the generic centered AI-product hero.
+OWN-WORLD: Warm observatory paper, charcoal ink, hairline rules, amber instrument marks, condensed editorial type, and flat measured panels.
+STORY: See the result, understand NOVA's bounded loop, inspect its method, then follow the build or source.
+FIRST VIEWPORT: A compact thesis and action occupy the left third; the current real image dominates the right; its measured facts form the baseline.
+FORM: Scientific editorial field note, pinned by Jeff as Observatory Notebook meets modern engineering lab.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+--><a class="skip-link" href="#content">Skip to content</a><nav class="site-nav" aria-label="Primary"><a class="brand" href="index.html"><img class="brand-mark" src="/nova-star.png" alt="">Measure the Pixels</a><div class="primary-nav"><a href="gallery.html">Images</a><a href="about.html">NOVA</a><a href="handbook/index.html" aria-current="page">Handbook</a><a href="validation/index.html">Validation</a><a href="changelog.html">Build Log</a></div><div class="utility-nav"><a href="https://www.youtube.com/@measurethepixels">YouTube ↗</a><a href="https://github.com/measurethepixels/nova">GitHub ↗</a></div></nav><main id="content">
+<p><a href="handbook/index.html">← Handbook</a></p>
+<header class="hb-head"><h1>Stacking, Integration, Weighting, and Rejection</h1><p>Combine a declared set of registered exposures so persistent astronomical signal accumulates while normalization, weighting, and pixel-level outlier rejection limit noise and transient defects.</p>
+<span>schema 1 · revision 1</span></header>
+<section><h2>Recognize it</h2><ul><li>A single exposure is noisy, but the target repeats at the same registered coordinates across frames.</li><li>Satellite trails, cosmic rays, or residual defects affect isolated pixel samples rather than every exposure.</li><li>Different integration strategies produce different noise, detail, artifact, or coverage tradeoffs from the same frame set.</li></ul></section>
+<section><h2>Intended output</h2><p>One still-linear integrated science image with its exact input manifest, frame count, total exposure, output grid, normalization, weighting, rejection, and executed engine recorded.</p></section>
+<section><h2>Required input state</h2><ul><li>A frozen, provenance-bearing light-frame manifest after frame-level subframe inspection and culling.</li><li>Frames registered to a declared common geometry, with calibration, CFA/debayer, filter, exposure, mount mode, panel, and session compatibility known.</li><li>A declared output grid, framing, drizzle state, normalization goal, weighting policy, rejection policy, and common measurement support.</li></ul></section>
+<section><h2>What NOVA does</h2><p>NOVA currently exposes four meaningful stack paths. Siril is the reference strategy: Siril registration followed by a 3/3 Winsorized-rejection mean, additive-scale normalization, background-noise weighting, and output normalization. ImageMM uses Siril-registered frames for a multi-frame deconvolution stack, currently 20 iterations, kappa 2.0, PerChannel. The historically named pixinsight_wbpp path is actually a hybrid: Siril registration plus PixInsight ImageIntegration with 3/3 Winsorized rejection, additive scaling, and requested SNR weighting. pixinsight_register changes registration, grid, and integration together. Requested behavior can fall back or change, so comparisons must record the executed treatment rather than only the requested engine name.</p></section>
+<section class="hb-two"><div><h2>Use when</h2><ul><li>Two or more compatible, registered exposures contain repeated target signal and partly independent noise.</li><li>A declared rejection and weighting policy is supportable for the available frame count and data class.</li><li>Alternative engines are being compared from a frozen manifest with state differences controlled or explicitly labeled.</li></ul></div>
+<div><h2>Skip when</h2><ul><li>There is only one usable exposure; no-op is not a comparable stacking control, so use a declared reference integration strategy instead.</li><li>Calibration, membership, registration, CFA/channel state, or output geometry is unresolved.</li><li>The sample count is too small for the proposed rejection rule to estimate outliers reliably.</li><li>The intended comparison cannot separate integration behavior from changed registration, drizzle, framing, or measurement support.</li></ul></div></section>
+<section class="hb-two"><div><h2>Limits</h2><ul><li>Frame-level culling and pixel-level rejection are different decisions: subframe inspection decides whether an entire exposure enters the stack; rejection decides whether an individual aligned pixel sample is an outlier during integration.</li><li>Rejection needs enough comparable samples to estimate a distribution; aggressive thresholds can remove real faint or thin structure as well as transients.</li><li>The ideal random-noise improvement is approximately proportional to the square root of comparable exposure count, but gradients, seeing, correlated noise, resampling, and unequal frames prevent that from being a guarantee.</li><li>An engine comparison that changes frame selection, registration grid, drizzle, framing, normalization, or support is a strategy/bundle comparison, not proof that one pixel-combination algorithm is intrinsically better.</li><li>NOVA&#x27;s stack SNR is a structure-to-background-noise proxy, not conventional astronomical photometric SNR; efficiency derived from it is not a universal truth score.</li><li>A readable output proves artifact production, not correctness, preservation, or a class-level engine preference.</li></ul></div>
+<div><h2>Scientific and aesthetic notes</h2><ul><li>Subframe Inspection and Culling is the frame-level decision page; this page begins with its retained manifest and does not duplicate its scoring guidance.</li><li>Measuring an Astrophoto defines why matched support and a vector of measurements matter; no single sharpness, SNR-proxy, or efficiency value should rank all stack strategies.</li><li>ImageMM couples integration with restoration, so smaller FWHM or more high-frequency structure can reflect ringing, noise amplification, or sharpened artifacts rather than more truthful detail.</li><li>Drizzle, max-framing mosaics, and canonical grids change sampling or support; compare FWHM in common angular units and keep coverage performance separate from common-support image quality.</li><li>A class-level preference requires repeated, version-applicable evidence across independent targets and data conditions, not one attractive result or a historical win fraction.</li></ul></div></section>
+<section><h2>Evidence and measurements</h2><table class="hb-diagnostics"><thead><tr><th>Measurements</th><th>Acceptance criteria</th></tr></thead><tbody><tr><td><ul><li>Exact included frame identities, count, total exposure, and spatial coverage.</li><li>Robust background-noise proxy on common sky support, with sampling and resampling state recorded.</li><li>FWHM and eccentricity from a stable star population in common angular or grid units.</li><li>Residual gradients, seams, clipping/pile-up diagnostics, and rejected-sample artifacts.</li><li>Fine-structure preservation plus ringing, false-detail, and noise-amplification inspection.</li><li>Runtime, memory, storage, I/O, and failures reported separately from image quality.</li></ul></td><td><ul><li>The artifact is readable, linear, on the declared grid, and accounts for the expected manifest and exposure.</li><li>Frame-level culling is explicitly distinguished from pixel-level rejection throughout the evidence and explanation.</li><li>No catastrophic registration, coverage, clipping, rejection-hole, trail, ringing, or preservation failure is accepted.</li><li>Comparisons use common support and disclose every unavoidable registration, drizzle, framing, normalization, weighting, and rejection difference.</li><li>SNR-proxy and efficiency values remain qualified; no one-dimensional score or single dataset establishes a universal engine preference.</li></ul></td></tr></tbody></table></section>
+<section><h2>Cross-tool matrix</h2><table class="hb-matrix"><thead><tr><th>Tool</th>
+<th>Equivalence</th><th>Expected result</th><th>Evidence</th></tr></thead>
+<tbody><tr><th>nova</th><td>Exact replay</td><td>A reproducible linear integration with manifest, executed treatment, and quality/resource evidence retained.</td><td>nova-stacking-source</td></tr><tr><th>pixinsight</th><td>Functional alternative</td><td>A weighted/rejected linear integration whose registration and parameter differences are explicit.</td><td>nova-stacking-source</td></tr><tr><th>siril</th><td>Same engine, adapted host</td><td>A conventional robust weighted integration suitable as NOVA&#x27;s reference strategy.</td><td>siril-stacking-1.4.4, nova-stacking-source</td></tr><tr><th>saspro</th><td>Same engine, adapted host</td><td>A restored multi-frame integration assessed for both detail and preservation artifacts.</td><td>saspro-imagemm-vendor, nova-stacking-source</td></tr></tbody></table></section>
+<div class="tools"><div class="ttabs"><button class="ttab active" data-t="hbtool-stacking-integration-weighting-rejection-nova">NOVA</button><button class="ttab" data-t="hbtool-stacking-integration-weighting-rejection-pixinsight">PixInsight</button><button class="ttab" data-t="hbtool-stacking-integration-weighting-rejection-siril">Siril</button><button class="ttab" data-t="hbtool-stacking-integration-weighting-rejection-saspro">SASpro</button></div><div class="tpane active" id="hbtool-stacking-integration-weighting-rejection-nova"><div class="hb-variant"><h3>NOVA stack dispatch <small>current source snapshot described by P09</small></h3><ol><li>Freeze the eligible frame manifest after frame-level culling and registration decisions.</li><li>Select a reference or alternative strategy and record requested plus executed engine, versions, framing, drizzle, grid, normalization, weighting, rejection, and fallback behavior.</li><li>Inspect common-support measurements, coverage, rejected samples or maps when available, and artifacts before accepting the integrated result.</li></ol><h4>Controls and starting ranges</h4><dl class="hb-controls"><dt>Siril reference</dt><dd>Winsorized 3/3; additive-scale normalization; background-noise weighting</dd><dt>ImageMM current runtime</dt><dd>20 iterations; kappa 2.0; PerChannel</dd><dt>hybrid PI integration</dt><dd>Winsorized 3/3; additive scaling; requested SNR weighting; avgdev or hero-mode IKSS scale</dd></dl><p><b>Mask behavior:</b> Use one declared common celestial/support region for comparisons; coverage maps and low-coverage edges are assessed separately.</p><h4>Failure modes</h4><ul><li>Frame-level exclusions are mistaken for pixel rejection.</li><li>A fallback silently changes the requested strategy.</li><li>One proxy or sharpened appearance is treated as an overall engine verdict.</li></ul><h4>Recovery</h4><ul><li>Return to the frozen manifest and a conventional Siril reference integration.</li><li>Match or explicitly disclose grid, support, drizzle, and framing differences.</li><li>Inspect rejection artifacts and preservation evidence before adjusting thresholds.</li></ul></div></div><div class="tpane" id="hbtool-stacking-integration-weighting-rejection-pixinsight"><div class="hb-variant"><h3>PixInsight ImageIntegration <small>source-recorded 1.9.3 behavior; installed version unverified</small></h3><ol><li>Use the same registered frame manifest and output geometry when testing integration alone.</li><li>Match normalization, rejection, and weighting goals as closely as the tool permits and record differences.</li><li>Inspect rejection maps and common-support output; call a PI-native registration run a strategy comparison, not integration-only evidence.</li></ol><h4>Controls and starting ranges</h4><dl class="hb-controls"><dt>NOVA hybrid reference</dt><dd>Winsorized 3/3, additive scaling, SNR weight request</dd></dl><p><b>Mask behavior:</b> Measure a common valid region; retain rejection maps separately from the integrated image.</p><h4>Failure modes</h4><ul><li>Calling NOVA&#x27;s hybrid path full WBPP.</li><li>Changing registration or grid while claiming an integration-only comparison.</li></ul><h4>Recovery</h4><ul><li>Retain Siril registration for the hybrid comparison.</li><li>Relabel PI-native registration plus integration as a bundle comparison.</li></ul></div></div><div class="tpane" id="hbtool-stacking-integration-weighting-rejection-siril"><div class="hb-variant"><h3>Siril sequence stacking <small>1.4.4 documentation; NOVA source targets 1.4.x</small></h3><ol><li>Stack the frozen registered sequence with the declared combination, normalization, weighting, rejection, and framing policy.</li><li>Record frame count and generate rejection maps when inspection is needed.</li><li>Compare on common support and do not treat the current 3/3 thresholds as universal optima.</li></ol><h4>Controls and starting ranges</h4><dl class="hb-controls"><dt>NOVA reference</dt><dd>rej 3 3, implicit Winsorized, addscale, noise weighting, output normalization</dd></dl><p><b>Mask behavior:</b> Use common valid support for quality measurements; -maximize union coverage is a separate declared treatment.</p><h4>Failure modes</h4><ul><li>Too few samples make clipping unstable.</li><li>Max-framing blank or low-coverage regions dominate whole-image statistics.</li></ul><h4>Recovery</h4><ul><li>Reduce or disable rejection for a small sample and inspect the result.</li><li>Use a common-support mask and assess union coverage separately.</li></ul></div></div><div class="tpane" id="hbtool-stacking-integration-weighting-rejection-saspro"><div class="hb-variant"><h3>Seti Astro Suite Pro ImageMM <small>vendor capability documented; installed version unverified</small></h3><ol><li>Use the same registered manifest and record the actual iteration, kappa, and color-mode settings.</li><li>Treat ImageMM as integration plus multi-frame restoration rather than another robust mean.</li><li>Inspect stars, faint structure, and high-contrast edges for ringing, false detail, and amplified noise.</li></ol><h4>Controls and starting ranges</h4><dl class="hb-controls"><dt>NOVA current runtime</dt><dd>20 iterations; kappa 2.0; PerChannel</dd></dl><p><b>Mask behavior:</b> Use common support and inspect artifact-prone star edges and faint structures at native scale.</p><h4>Failure modes</h4><ul><li>Sharpness-oriented metrics reward the method by construction.</li><li>The ontology&#x27;s unexecutable 40-iteration candidate is reported as current behavior.</li></ul><h4>Recovery</h4><ul><li>Compare against the conventional reference on common support.</li><li>Return to the source-confirmed 20-iteration runtime treatment and record executed parameters.</li></ul></div></div></div>
+<section><h2>Validation status</h2><p><strong class="hb-validation">Not yet Jeff-validated.</strong> Use this as sourced guidance, not a certification.</p></section>
+<section><h2>Sources</h2><ul><li>Phase-2 research packet P09, 2026-08-27 <code>Handbook P09 — Stacking, Integration Engines, and Rejection Strategy</code> — Reasoned translation</li><li>NOVA stack dispatch, configuration, and assessment source <code>nas_server/stacker.py:stack_target; nas_server/stack_config.py; nas_server/seestar_stack_only.ssf; nas_server/stack_assessor.py</code> — NOVA source-confirmed</li><li><a href="https://siril.readthedocs.io/en/stable/Commands.html#stack">Siril 1.4.4 stacking command documentation</a> — Vendor-documented</li><li><a href="https://www.setiastro.com/seti-astro-suite-pro">Seti Astro Suite Pro ImageMM stacking description</a> — Vendor-documented</li></ul></section>
+<section><h2>Related evidence</h2>
+<p>The M66 recipe and Jeff-validation ledger will link here when their static
+exports are available. Until then, this article remains explicitly unvalidated.</p></section>
+<script>
+document.querySelectorAll('.ttab').forEach(b=>b.addEventListener('click',()=>{
+  const scope=b.closest('.tools');
+  scope.querySelectorAll('.ttab').forEach(x=>x.classList.remove('active'));
+  scope.querySelectorAll('.tpane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  document.getElementById(b.dataset.t).classList.add('active');
+}));
+
+document.querySelectorAll('.ba-slider').forEach(function(s) {
+  var r = s.querySelector('.ba-range');
+  var b = s.querySelector('.ba-before');
+  var d = s.querySelector('.ba-divider');
+  r.addEventListener('input', function() {
+    var pct = this.value;
+    b.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+    d.style.left = pct + '%';
+  });
+});
+</script>
+</main><footer><div>NOVA / bounded decisions · recorded evidence · human review<br>
+<a href="https://github.com/measurethepixels/nova">GitHub</a> · <a href="https://www.youtube.com/@measurethepixels">YouTube</a></div>
+<div class="footer-tag">Measure the pixels. Make the call.</div></footer></body></html>
