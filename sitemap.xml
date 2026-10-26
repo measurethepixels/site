@@ -1,10 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://measurethepixels.com/</loc></url>
-  <url><loc>https://measurethepixels.com/gallery.html</loc></url>
   <url><loc>https://measurethepixels.com/about.html</loc></url>
   <url><loc>https://measurethepixels.com/changelog.html</loc></url>
-  <url><loc>https://measurethepixels.com/handbook/index.html</loc></url>
-  <url><loc>https://measurethepixels.com/validation/index.html</loc></url>
+  <url><loc>https://measurethepixels.com/gallery.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/background-extraction.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/background-neutralization.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/bright-core-selective-hdr.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/bright-star-halo-suppression.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/calibration-foundations.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/color-calibration.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/cosmetic-correction.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/crop-and-framing.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/curves.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/dark-structure-enhancement.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/deconvolution.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/denoise.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/experiment-evidence-aggregation.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/experiment-mode.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/final-image-quality-assessment.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/hdr-dynamic-range-compression.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/how-nova-knows.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/how-novas-knowledge-fits-together.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/input-data-state.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/linear-star-split.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/local-contrast.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/measurement-framework.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/narrowband-dual-band-strategy.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/output-export-reproducibility.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/pedestal-removal.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/post-stretch-denoise.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/registration-alignment-coverage-mosaics.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/saturation.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/sky-green-rebalance.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/stacking-integration-weighting-rejection.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/star-correction.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/starless-finishing.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/stretch.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/subframe-inspection.html</loc></url>
+  <url><loc>https://measurethepixels.com/handbook/target-morphology-strategy.html</loc></url>
   <url><loc>https://measurethepixels.com/privacy.html</loc></url>
+  <url><loc>https://measurethepixels.com/recipes/20260604_043205_seestar_galaxy/</loc></url>
+  <url><loc>https://measurethepixels.com/recipes/20260604_143439_seestar_galaxy/</loc></url>
+  <url><loc>https://measurethepixels.com/recipes/20260605_030216_seestar_galaxy/</loc></url>
+  <url><loc>https://measurethepixels.com/recipes/20260611_143236_seestar_nebula/</loc></url>
+  <url><loc>https://measurethepixels.com/recipes/20260706_231636_seestar_nebula/</loc></url>
+  <url><loc>https://measurethepixels.com/recipes/20260711_021336_seestar_nebula/</loc></url>
+  <url><loc>https://measurethepixels.com/recipes/20260715_194614_seestar_galaxy/</loc></url>
+  <url><loc>https://measurethepixels.com/recipes/20260722_063635_seestar_broadband/</loc></url>
+  <url><loc>https://measurethepixels.com/validation/</loc></url>
+  <url><loc>https://measurethepixels.com/validation/methodology.html</loc></url>
 </urlset>
