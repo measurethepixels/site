@@ -1,0 +1,906 @@
+{
+ "datasets": {
+  "m101_B": {
+   "source_sha256": [
+    "4ea1d32a1482a6dc618f2b9ef33d1c37da8fccb30d9d7cfddc4a71856ab32708",
+    "618cc244be212d84b0a52fa6e596634c45a74fa67330c3c791e9efc506a940d9",
+    "010a1494caf40b9a93183a67573a843118dc2e89dea9e12c9a9351f7c4ab4d78",
+    "4ef2dbb464332b17573ef9583c0593f34de3d0a77d525b6019ed968c1132ed1f"
+   ],
+   "views": {
+    "core": {
+     "crop_xyxy": [
+      421,
+      874,
+      621,
+      1074
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 53002,
+       "height": 200,
+       "src": "17f644746b64be2b0e73aed46f0e390b4ca922218cea0e5f17c0644dd928d64e.webp",
+       "width": 200
+      },
+      {
+       "bytes": 54544,
+       "height": 200,
+       "src": "722011b02c4df1c7e246248bce9c6c3d5e1dd60a1390885ab3586ab006df7e51.webp",
+       "width": 200
+      },
+      {
+       "bytes": 53102,
+       "height": 200,
+       "src": "74e2a19e890e21c94ca07ae8856028d3ad86245fe01f85ad4f1c7d1c35de039f.webp",
+       "width": 200
+      },
+      {
+       "bytes": 51002,
+       "height": 200,
+       "src": "bdc8340c4ece7c5f0410efc2b76e0bd9868fbe03957fae7a140012df323feea3.webp",
+       "width": 200
+      }
+     ]
+    },
+    "faint": {
+     "crop_xyxy": [
+      249,
+      1120,
+      449,
+      1320
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 60278,
+       "height": 200,
+       "src": "01d5ed46eda0c0042c6453cbca4b6866bf58d12073798abd74d052dfb395bc2e.webp",
+       "width": 200
+      },
+      {
+       "bytes": 61748,
+       "height": 200,
+       "src": "2c9bd9cf188310f88e30c627a4a50e19ebf548ea077d66352b717a3dbfcbdfd5.webp",
+       "width": 200
+      },
+      {
+       "bytes": 59246,
+       "height": 200,
+       "src": "041911a024f9ebc72e22cb45c6ffc39c19b8a47ec95f7e033327fcad7f3c882f.webp",
+       "width": 200
+      },
+      {
+       "bytes": 58102,
+       "height": 200,
+       "src": "b999a2f49bbbd220cd45f7bf84af0f8f2fc05b070e0f14c3962dd669f687e3f7.webp",
+       "width": 200
+      }
+     ]
+    },
+    "full": {
+     "crop_xyxy": [
+      177,
+      824,
+      725,
+      1452
+     ],
+     "encoding": "webp-lossy-q92",
+     "tiles": [
+      {
+       "bytes": 80798,
+       "height": 628,
+       "src": "c437e1cc34aef28e754f85aae9098b10d9026c1d7d4db04fd20600cc154ad4c0.webp",
+       "width": 548
+      },
+      {
+       "bytes": 93598,
+       "height": 628,
+       "src": "c2fff01e608c8b365db4a0658a3bad248aec29f52952f7dd4e20ba9505b4ff2e.webp",
+       "width": 548
+      },
+      {
+       "bytes": 72886,
+       "height": 628,
+       "src": "cd15c1db9003c9071a423128d9b188ce642d4a433cfa41e02e1efc2da1414c36.webp",
+       "width": 548
+      },
+      {
+       "bytes": 81246,
+       "height": 628,
+       "src": "e79688ea5c584889098a066eecfd696407895c519102677a9b3d199b14d409a1.webp",
+       "width": 548
+      }
+     ]
+    },
+    "stars": {
+     "crop_xyxy": [
+      454,
+      516,
+      654,
+      716
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 60698,
+       "height": 200,
+       "src": "8ac9fbf1a92bac20949c535f8e1ef41578af351c85f8998e25989726a4f84977.webp",
+       "width": 200
+      },
+      {
+       "bytes": 62370,
+       "height": 200,
+       "src": "28464a1efd172e016cb76901ea5c375cd424919f40853cb47f7fd2f2de963cec.webp",
+       "width": 200
+      },
+      {
+       "bytes": 60414,
+       "height": 200,
+       "src": "664f3dcf31378703385222292c6b6c740d00b7df98fb922a3bad00b983224a14.webp",
+       "width": 200
+      },
+      {
+       "bytes": 59118,
+       "height": 200,
+       "src": "8d7ed17024ffd78aa5ad9c31beec975ae9365b397b87965f871a686945724076.webp",
+       "width": 200
+      }
+     ]
+    }
+   }
+  },
+  "m1_B": {
+   "source_sha256": [
+    "56c2dc64d939f3aa48dd723845af0047104e7c841c03c8fe78ae1cfed8d73734",
+    "d52f1bafe8860bb49fa3cf19608a5dcb027595b465bb92f06b4f649ab3344d09",
+    "b30329db02659c2e0da11382714abd77417a7364820d914c56669c5e5375a137",
+    "a92ac1152c6801c00fa8ffe00526a1e7b1c34ce2a37a23ec9131a14e030f4255"
+   ],
+   "views": {
+    "core": {
+     "crop_xyxy": [
+      392,
+      830,
+      592,
+      1030
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 64042,
+       "height": 200,
+       "src": "9903c252dc7ac1206ebc2ebf797400e7d61fc4438821f70b93fb3d040ee8d7f3.webp",
+       "width": 200
+      },
+      {
+       "bytes": 65896,
+       "height": 200,
+       "src": "aeff8d31d1c125b50f269473355e14a214ac937c8a7ec541f92ca4398e234b04.webp",
+       "width": 200
+      },
+      {
+       "bytes": 65124,
+       "height": 200,
+       "src": "a73a1d16e6f1eff5bda74f3cee4661246eaa96e582575d0f07f53e7a381c0347.webp",
+       "width": 200
+      },
+      {
+       "bytes": 61780,
+       "height": 200,
+       "src": "dadbde6f8f3de3aba55787402e453edecc0e8bffa276dd916b6831865f0ad561.webp",
+       "width": 200
+      }
+     ]
+    },
+    "faint": {
+     "crop_xyxy": [
+      429,
+      1205,
+      629,
+      1405
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 68438,
+       "height": 200,
+       "src": "be727f48e1c039e432e99e95694cd0a95b1f3b6b06390868b9bc673289f9cf88.webp",
+       "width": 200
+      },
+      {
+       "bytes": 70554,
+       "height": 200,
+       "src": "a56a305f3aab96f4feafde9849a10da76dc7ff6e87b3f19306ea1d450bc608d3.webp",
+       "width": 200
+      },
+      {
+       "bytes": 68468,
+       "height": 200,
+       "src": "5a9234cd4568cce3a58c69895e401c7ffbdea43dba45f9f857045d4d88da099d.webp",
+       "width": 200
+      },
+      {
+       "bytes": 63774,
+       "height": 200,
+       "src": "8d446b5bc11f9aed37ad608de43726d26df21c44bc4ccc9732e44e1721281f7a.webp",
+       "width": 200
+      }
+     ]
+    },
+    "full": {
+     "crop_xyxy": [
+      38,
+      920,
+      178,
+      1829
+     ],
+     "encoding": "webp-lossy-q92",
+     "tiles": [
+      {
+       "bytes": 24890,
+       "height": 640,
+       "src": "a86574f8c4a581b1bf69adf24e2fdaed5a8c98302cf80c7ec4393b5a3e5e34d1.webp",
+       "width": 99
+      },
+      {
+       "bytes": 25498,
+       "height": 640,
+       "src": "e92ef65cbdcbc1d2d6457f9c8f41f4cb663b180d3be73b7a1fdff591ba2e3239.webp",
+       "width": 99
+      },
+      {
+       "bytes": 23756,
+       "height": 640,
+       "src": "f33eaba53b8faf35bf9124348c9828a954165fb0cbf95951e727fb968ac5c619.webp",
+       "width": 99
+      },
+      {
+       "bytes": 24802,
+       "height": 640,
+       "src": "d4e9c1803d087fc944810b0497730bc83bf6c5bb47b36170faad18aea59ab22d.webp",
+       "width": 99
+      }
+     ]
+    },
+    "stars": {
+     "crop_xyxy": [
+      336,
+      6,
+      536,
+      206
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 71078,
+       "height": 200,
+       "src": "aee2de38baa3bf418fc8030e8d4e6716c4907e5c27daae36b604cf2457b0f220.webp",
+       "width": 200
+      },
+      {
+       "bytes": 71700,
+       "height": 200,
+       "src": "ca8a4d0bf6f0e9981c499056645b67165d0dece20ecf9846d010ac0771569f6c.webp",
+       "width": 200
+      },
+      {
+       "bytes": 69984,
+       "height": 200,
+       "src": "3f0420a3e179a044ea4150d0fdc4b67597483b61f4a3bbaab5a684153b4e7d71.webp",
+       "width": 200
+      },
+      {
+       "bytes": 65742,
+       "height": 200,
+       "src": "761e65d1dcc851befd65f85284dd4ec10c0cecc8b3ac8cefbfeaa89189fed9fa.webp",
+       "width": 200
+      }
+     ]
+    }
+   }
+  },
+  "m45_B": {
+   "source_sha256": [
+    "73d078e6c18b23abde5b4082c05c127fa71c1c8021cffda3255c12562c04b1bc",
+    "9c8c804b476b36b487daa3d9a87dded66f4270954a04bcdb53e5039b9619f3a5",
+    "d84738899538978c8335e5bdbaba6f51bed6f3e26bce182260d0c1a202184bb2",
+    "f9a392919033d06ab201f7ed7a6602976e4f45c5affd44f1be8bfebebeb92a28"
+   ],
+   "views": {
+    "core": {
+     "crop_xyxy": [
+      834,
+      1095,
+      1034,
+      1295
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 44520,
+       "height": 200,
+       "src": "02389c8e13e46c7fe9c6273a7ee3d0c4e5a2b985a650a9aebce6f498334489b4.webp",
+       "width": 200
+      },
+      {
+       "bytes": 45094,
+       "height": 200,
+       "src": "cfe609292d812b510d84074e090ff8e113ec53b7be8fc1976b61ab40d13369a9.webp",
+       "width": 200
+      },
+      {
+       "bytes": 46690,
+       "height": 200,
+       "src": "f457ab0156a7f201e9e26313e655c1bc8fe26ab07dff83d2db64fa4946f6c84d.webp",
+       "width": 200
+      },
+      {
+       "bytes": 42660,
+       "height": 200,
+       "src": "9ecddbbb1aadcf6d524fe549c83e8102bc75bf2ef64094f455e9149ea12ea7a2.webp",
+       "width": 200
+      }
+     ]
+    },
+    "faint": {
+     "crop_xyxy": [
+      677,
+      438,
+      877,
+      638
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 44992,
+       "height": 200,
+       "src": "39e75d37fb40dae18f8f1ecc78768feb9dac74af55a136e81b024fc23cb79b74.webp",
+       "width": 200
+      },
+      {
+       "bytes": 45774,
+       "height": 200,
+       "src": "e1bcea378695aad6576924a6f870b551d80d49ce9c74eab33b69e9ecc1f0d1a6.webp",
+       "width": 200
+      },
+      {
+       "bytes": 47722,
+       "height": 200,
+       "src": "e4ee5bc7bec0d91b892a79b5ec7be8727d9feec3f1bed82a01cf15b076dcb0ce.webp",
+       "width": 200
+      },
+      {
+       "bytes": 43256,
+       "height": 200,
+       "src": "1e2b7e028afc35e85700ae30c5f38b49b8be1a319eba915179bad4b6c6bc3ffb.webp",
+       "width": 200
+      }
+     ]
+    },
+    "full": {
+     "crop_xyxy": [
+      21,
+      533,
+      1027,
+      1139
+     ],
+     "encoding": "webp-lossy-q92",
+     "tiles": [
+      {
+       "bytes": 50856,
+       "height": 386,
+       "src": "ea223d296f869d0ee33aa9b651bfd750826179fb99dc830d0ae9472691306394.webp",
+       "width": 640
+      },
+      {
+       "bytes": 51328,
+       "height": 386,
+       "src": "72c2542a182435071c0c63c39f59ad0846881935a6fa0a6835ca76e75e24e2d8.webp",
+       "width": 640
+      },
+      {
+       "bytes": 49644,
+       "height": 386,
+       "src": "c2166d679d90a11d87e9a220176cc2394340804adb9ae9d27127e1a913889d17.webp",
+       "width": 640
+      },
+      {
+       "bytes": 52076,
+       "height": 386,
+       "src": "01d140fbb5d2f9b468941735535bf757d18f67e314ec369f8bd90fe05ee745e1.webp",
+       "width": 640
+      }
+     ]
+    },
+    "stars": {
+     "crop_xyxy": [
+      158,
+      444,
+      358,
+      644
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 57232,
+       "height": 200,
+       "src": "fc69bac57cc7aed4de1aa1928bb39fd947980cb063adb729f081aaf1cca9e180.webp",
+       "width": 200
+      },
+      {
+       "bytes": 58430,
+       "height": 200,
+       "src": "b7806622e7aed20a7c10501a399d84bbf9aaff0cb6fde0b1f51fdbf494b72bf8.webp",
+       "width": 200
+      },
+      {
+       "bytes": 56458,
+       "height": 200,
+       "src": "0f131ff9047e0d415d4a6d82bdb7117f11fa0c0ee3a627dfdcbeb12ae982b3b6.webp",
+       "width": 200
+      },
+      {
+       "bytes": 55696,
+       "height": 200,
+       "src": "6ea34ec4a68d538dba02d58e174da495bff1adc00155049938327db08f92686d.webp",
+       "width": 200
+      }
+     ]
+    }
+   }
+  },
+  "m51_B": {
+   "source_sha256": [
+    "2b324c79ebbbf2e632ddbbd6f8eb70fb55b0ab58b32fde7ed1476f93c729533f",
+    "3e46a6b2e507404e46f1b12c54bbea5b0e8ed269621c4cf4f5ce1723f9be45c4",
+    "092b89d6a319ca3dbadd8616778584cc581165349e93a3c64fcc0a33ca04b92a",
+    "03a4eaa70827d8a5c0f23fe2e213dbb8df00501b0691a4cb0bd26bf98bee96ec"
+   ],
+   "views": {
+    "core": {
+     "crop_xyxy": [
+      412,
+      859,
+      612,
+      1059
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 54434,
+       "height": 200,
+       "src": "5f3b5de5062f97c09e0f18860ba26351a86e508364c36118aa3fc4b4aecdb239.webp",
+       "width": 200
+      },
+      {
+       "bytes": 55210,
+       "height": 200,
+       "src": "21198ce211a1ddf9d5ee41302d9cc5917f5f4ff5fc42dee7b6cbabaa365dcd07.webp",
+       "width": 200
+      },
+      {
+       "bytes": 54008,
+       "height": 200,
+       "src": "267367630005fcef193a6eb0760575fc971e46539f8cbd2bfe792aca2d66317a.webp",
+       "width": 200
+      },
+      {
+       "bytes": 51388,
+       "height": 200,
+       "src": "1ae60c0e1017b144eb36e1db87f8a315fb32ca3648c06fd27be3970bc420055a.webp",
+       "width": 200
+      }
+     ]
+    },
+    "faint": {
+     "crop_xyxy": [
+      241,
+      1181,
+      441,
+      1381
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 62030,
+       "height": 200,
+       "src": "0c87e9138d56c48b2622fa7a30eb7c2c494661c269f7f15938cc5f4dc22a3797.webp",
+       "width": 200
+      },
+      {
+       "bytes": 64080,
+       "height": 200,
+       "src": "a29d71a11900c4dc7eadb0d7e729d651c3346fe76d417b868db5e00f568990bf.webp",
+       "width": 200
+      },
+      {
+       "bytes": 61352,
+       "height": 200,
+       "src": "60678973b47107b721d240cfb9801e5583d7ad59191faa701302ad65c405e420.webp",
+       "width": 200
+      },
+      {
+       "bytes": 59982,
+       "height": 200,
+       "src": "49bdb8ea9d5fc1b3de225844f313d77901dc4f5354af2f59d5b63098c56e055f.webp",
+       "width": 200
+      }
+     ]
+    },
+    "full": {
+     "crop_xyxy": [
+      355,
+      728,
+      662,
+      1145
+     ],
+     "encoding": "webp-lossy-q92",
+     "tiles": [
+      {
+       "bytes": 33418,
+       "height": 417,
+       "src": "809f6031f8205e85e284721f326d5da5c76be0c1b00350865589216f15a5d8d5.webp",
+       "width": 307
+      },
+      {
+       "bytes": 36364,
+       "height": 417,
+       "src": "d961538da773879a3838b929c129b458b4699aa7657b7d3e276570e43ef013a4.webp",
+       "width": 307
+      },
+      {
+       "bytes": 31716,
+       "height": 417,
+       "src": "fc43ee4ff0081248b8bb90ea0cf1df895067049d1630151e3f6ed8b621000dec.webp",
+       "width": 307
+      },
+      {
+       "bytes": 34240,
+       "height": 417,
+       "src": "ae5c0f92408117a0e811f2ca421c8dd4da4dfaebc590e0f0ec61bb032c3b02b9.webp",
+       "width": 307
+      }
+     ]
+    },
+    "stars": {
+     "crop_xyxy": [
+      28,
+      923,
+      228,
+      1123
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 62328,
+       "height": 200,
+       "src": "0f5ef69ddc0e60afd79673dd4516ade47f661ace175ddaf5486138a903eae749.webp",
+       "width": 200
+      },
+      {
+       "bytes": 64880,
+       "height": 200,
+       "src": "2338888e7db748ccb8432349b3cd3a07429a71cae1aed8e5f8f9bf3d06ba89c9.webp",
+       "width": 200
+      },
+      {
+       "bytes": 62310,
+       "height": 200,
+       "src": "e8cfef0ecb103b30f6c3e7b2398cf4d339a4dba123a053f61f4b9a3f5e422232.webp",
+       "width": 200
+      },
+      {
+       "bytes": 60928,
+       "height": 200,
+       "src": "c041ef041cfce2c3c416a2d61184fa31e17d6c8d1c583a6df324d286acf2a78f.webp",
+       "width": 200
+      }
+     ]
+    }
+   }
+  },
+  "m51all_B": {
+   "source_sha256": [
+    "2dd222edf04247a92e12a3b08f790ce42ebbfb40b473175ed05f3716e3075fe8",
+    "c946e6804d4e62b12aa352d3b8cc480f25c712b1bf707fe2dfdbeffcf7ac5f5b",
+    "4aa313d77652d0623bf6e4fdd1678bcbc6dd7a3c41ec92c8be94cc9f35041cc0",
+    "cf8c41d89059b16bee81c3e16f991b4d0632e6d7dd6a9cd6b1d2e9e0e67f595f"
+   ],
+   "views": {
+    "core": {
+     "crop_xyxy": [
+      453,
+      677,
+      653,
+      877
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 47796,
+       "height": 200,
+       "src": "863479354e0560f9f91d85a7367b7b0caf830442b88981fff0f263206ce75214.webp",
+       "width": 200
+      },
+      {
+       "bytes": 48096,
+       "height": 200,
+       "src": "5756dbef6777436f8edb70ff7450cc3a5c0294286ebc3a4632d2ada0ca60f655.webp",
+       "width": 200
+      },
+      {
+       "bytes": 52336,
+       "height": 200,
+       "src": "70ea98523deb888139fa8ff23ce805fbec1b26afd8202f394ff046bb74661e5a.webp",
+       "width": 200
+      },
+      {
+       "bytes": 44682,
+       "height": 200,
+       "src": "aee5fad656089a949ee20f961d21f0e8857aff26c07df26be8100e9eb1abc0d9.webp",
+       "width": 200
+      }
+     ]
+    },
+    "faint": {
+     "crop_xyxy": [
+      619,
+      927,
+      819,
+      1127
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 57284,
+       "height": 200,
+       "src": "e11b1d49f3e77173687874e7d9d5f05af6d162c30e4d1dbc197623895a8fd016.webp",
+       "width": 200
+      },
+      {
+       "bytes": 57842,
+       "height": 200,
+       "src": "019b26f744d96a3380519f6479b369150b34a05abc155d2ae6c57284a27655df.webp",
+       "width": 200
+      },
+      {
+       "bytes": 55274,
+       "height": 200,
+       "src": "83e8a2b1b17031cffd447fe6657563ae306bff2081af5bdd7cf63534de584b8a.webp",
+       "width": 200
+      },
+      {
+       "bytes": 53682,
+       "height": 200,
+       "src": "aafe3925b138d67253764056e30582199d4f3cf2a37ae142b833140029bdca86.webp",
+       "width": 200
+      }
+     ]
+    },
+    "full": {
+     "crop_xyxy": [
+      323,
+      297,
+      759,
+      1246
+     ],
+     "encoding": "webp-lossy-q92",
+     "tiles": [
+      {
+       "bytes": 42416,
+       "height": 640,
+       "src": "edcaeaa4a523d8441471b0053148a8a28771b21ea9fdc0507af30a0d3dcd8195.webp",
+       "width": 294
+      },
+      {
+       "bytes": 44190,
+       "height": 640,
+       "src": "d512b99b2101d09d66bfe6ed353ac251c2b70bc0786cbaa03d0370d972629680.webp",
+       "width": 294
+      },
+      {
+       "bytes": 39712,
+       "height": 640,
+       "src": "b92b684f84b670c590dfd49edb429e4ae2f4d36062c251e085df77514fc4b2d3.webp",
+       "width": 294
+      },
+      {
+       "bytes": 41876,
+       "height": 640,
+       "src": "423d20b0c25e64d6251331f319effd5c6f24f495835e98f1f768e697e141a64c.webp",
+       "width": 294
+      }
+     ]
+    },
+    "stars": {
+     "crop_xyxy": [
+      20,
+      336,
+      220,
+      536
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 58250,
+       "height": 200,
+       "src": "0c2a6d3f5b136b882aaab3de3beb32f728be540fc3cd34298f1b2995c93d541c.webp",
+       "width": 200
+      },
+      {
+       "bytes": 58742,
+       "height": 200,
+       "src": "5f33e47fb7b5a27eadd594d450647fa85f1c41c45c832e0d778460eb7d011b40.webp",
+       "width": 200
+      },
+      {
+       "bytes": 56234,
+       "height": 200,
+       "src": "c19a298ba8e9c0f67cdd85c8d96feb571af06d12fdecf890b41e5825fa46cd54.webp",
+       "width": 200
+      },
+      {
+       "bytes": 54714,
+       "height": 200,
+       "src": "ae0b526febf8f63367f40ee37839aa2b1eab485314ce24a8319291dcd3917e65.webp",
+       "width": 200
+      }
+     ]
+    }
+   }
+  },
+  "ngc281_B": {
+   "source_sha256": [
+    "d32d5646f0c228a69944ab45e6cfa252b40c3c8578583f9604b86974e224f819",
+    "1cc5c0b3fe49e6d3ad9ba9a631e66142bf84ad0b373441f69fec4a1b1d7b001d",
+    "24d59d697b68aa68bcc4d94dc9947227edc535575f03638847513f0b12b3d13e",
+    "060ea6aaa18dc627eeabc78cef56e0aec34e899b1ee7292ed6c3461e4d3d7869"
+   ],
+   "views": {
+    "core": {
+     "crop_xyxy": [
+      516,
+      532,
+      716,
+      732
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 55284,
+       "height": 200,
+       "src": "b5da7cfecae0d43e93cd7765224fe446eb26d49d88fbbef6fb52d8a64095e451.webp",
+       "width": 200
+      },
+      {
+       "bytes": 60678,
+       "height": 200,
+       "src": "0f2840ce28533b0ea394104c686f100a50d64dd3a5246a38afb1e8313694966b.webp",
+       "width": 200
+      },
+      {
+       "bytes": 55442,
+       "height": 200,
+       "src": "736500c710b884748d0d6ce3b34f4b54bba7b513a15b3030a374c521b7a73557.webp",
+       "width": 200
+      },
+      {
+       "bytes": 63512,
+       "height": 200,
+       "src": "81e6ef5b6263197a1b7c7dbb487144bd368eaf6ebef89dc596db8366015d6ada.webp",
+       "width": 200
+      }
+     ]
+    },
+    "faint": {
+     "crop_xyxy": [
+      503,
+      232,
+      703,
+      432
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 60620,
+       "height": 200,
+       "src": "5719262dcd0667b2e4c73608236f29e13fb0cca16052f2933957e3bdfbe53fdf.webp",
+       "width": 200
+      },
+      {
+       "bytes": 66090,
+       "height": 200,
+       "src": "02fdc1111fd6273f4987c9dec0d31f97b567bb05bf3caec66f8c7fa2cb3cdee8.webp",
+       "width": 200
+      },
+      {
+       "bytes": 60318,
+       "height": 200,
+       "src": "719061f25bf68240f7046d8c90b2be6b19e0681dd20f996f840af26d63e1db6a.webp",
+       "width": 200
+      },
+      {
+       "bytes": 68718,
+       "height": 200,
+       "src": "981ca7430770cd2b21937c11624f0c9ec92d8c4dfb9de64d7bc2cb92329cb7e9.webp",
+       "width": 200
+      }
+     ]
+    },
+    "full": {
+     "crop_xyxy": [
+      451,
+      242,
+      850,
+      1134
+     ],
+     "encoding": "webp-lossy-q92",
+     "tiles": [
+      {
+       "bytes": 54664,
+       "height": 640,
+       "src": "1b7ad2b2e53ac09eb8a8339e429a3771574e74c3623d97222dcd40c199fb94a5.webp",
+       "width": 286
+      },
+      {
+       "bytes": 57574,
+       "height": 640,
+       "src": "210b963f8694d13eb1a346df0f2898cd6d8f381b731e398e737beecac035b697.webp",
+       "width": 286
+      },
+      {
+       "bytes": 47908,
+       "height": 640,
+       "src": "7024b078a8fc94101d400ee10194496dcd795ed909b906ea2486566691642f87.webp",
+       "width": 286
+      },
+      {
+       "bytes": 70336,
+       "height": 640,
+       "src": "79f1a7481de548721d3c0e69b010c313b11f763bd7667f1d77799adcfee9a704.webp",
+       "width": 286
+      }
+     ]
+    },
+    "stars": {
+     "crop_xyxy": [
+      203,
+      131,
+      403,
+      331
+     ],
+     "encoding": "webp-lossless",
+     "tiles": [
+      {
+       "bytes": 65632,
+       "height": 200,
+       "src": "8d1301857110acfe1d00b5f2e6aecc8124eceb4667abafee3b442e7e938ffcf2.webp",
+       "width": 200
+      },
+      {
+       "bytes": 71374,
+       "height": 200,
+       "src": "32c672eface1414721ead6d112d6c203b6bf2be387de726a66741ff70c1c8337.webp",
+       "width": 200
+      },
+      {
+       "bytes": 65866,
+       "height": 200,
+       "src": "838de6ca711aecadca62dfeee58fbd97f149d25d32bbe24e35aa8f37708043b6.webp",
+       "width": 200
+      },
+      {
+       "bytes": 74226,
+       "height": 200,
+       "src": "b329861209016aef033b1b7f1506e9daaa795a36734bee6d1c85d0d894e015ad.webp",
+       "width": 200
+      }
+     ]
+    }
+   }
+  }
+ },
+ "source": "lane2_v3 matched-display masters",
+ "version": 1
+}

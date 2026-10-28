@@ -144,6 +144,48 @@ footer{display:grid;grid-template-columns:1fr auto;gap:1rem;max-width:1280px;mar
 .hb-experiment figcaption {margin-top:.6rem; font-size:.92rem; color:var(--muted); max-width:75ch}
 .hb-experiment details {margin-top:.5rem}
 .hb-experiment summary {cursor:pointer; min-height:44px; display:flex; align-items:center; color:var(--ink); font-weight:600}
+.hb-experiment .hb-head {max-width:none; margin-left:0}
+.hb-experiment .stack-subtitle {font-size:1.25rem; max-width:55ch}
+.hb-experiment .stack-opening {margin:2rem 0; background:#080a0e; color:#f4f0e6}
+.hb-experiment .stack-opening figcaption a {color:#8bc8f3; text-decoration:underline}
+.hb-experiment .stack-opening figcaption {padding:.8rem 1rem; color:#f4f0e6}
+.hb-experiment .stack-findings {display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin:3rem 0}
+.hb-experiment .stack-findings a {display:flex; flex-direction:column; gap:1rem; padding-top:1rem; border-top:1px solid var(--line); color:var(--ink); text-decoration:none}
+.hb-experiment .stack-findings strong {font-size:clamp(1.4rem,3vw,2.3rem); line-height:1.1}
+.hb-experiment .stack-findings svg {width:100%; height:60px; margin-top:auto}
+.hb-experiment .stack-controls {display:flex; flex-wrap:wrap; align-items:center; gap:.65rem; margin:1rem 0}
+.hb-experiment .stack-controls button,.hb-experiment .stack-controls select {min-height:44px; padding:.5rem .75rem; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:2px; font:inherit; cursor:pointer}
+.hb-experiment .stack-controls label {display:flex; align-items:center; gap:.5rem}
+.hb-experiment .stack-controls button:hover,.hb-experiment .stack-controls button[aria-pressed=true] {background:var(--ink); color:var(--paper)}
+.hb-experiment .stack-controls button:disabled {opacity:.5; cursor:default}
+.hb-experiment .stack-panels {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; background:#080a0e; padding:1rem}
+.hb-experiment .stack-panels figure {min-width:0; border:1px solid var(--engine,#b9ae9b)}
+.hb-experiment .stack-panels figcaption {color:#f4f0e6; margin:0; padding:.5rem .75rem; border-bottom:1px solid var(--engine,#b9ae9b)}
+.hb-experiment .stack-surface {overflow:hidden; position:relative; touch-action:pan-y pinch-zoom; cursor:crosshair}
+.hb-experiment .stack-pan-enabled .stack-surface {touch-action:pinch-zoom; cursor:grab}
+.hb-experiment .stack-plane {width:100%; height:100%; position:relative; transform-origin:center}
+.hb-experiment .stack-plane img {border:0; width:100%; height:100%; object-fit:contain; image-rendering:pixelated; user-select:none}
+.hb-experiment .stack-marker {position:absolute; width:20px; height:20px; border:1px solid white; outline:1px solid black; transform:translate(-50%,-50%); pointer-events:none}
+.hb-experiment .stack-marker::before,.hb-experiment .stack-marker::after {content:''; position:absolute; background:white}
+.hb-experiment .stack-marker::before {width:30px; height:1px; left:-5px; top:9px}
+.hb-experiment .stack-marker::after {height:30px; width:1px; top:-5px; left:9px}
+.hb-experiment #stack-tabs {display:none}
+.hb-experiment .stack-plot {margin:2rem 0}
+.hb-experiment .stack-plot svg {display:block; width:100%; height:auto; font-size:16px; fill:var(--ink)}
+.hb-experiment .stack-plot span {display:inline-block; border-bottom:2px solid var(--engine); margin-right:.5rem}
+@media(max-width:600px) {
+.hb-experiment .stack-findings {grid-template-columns:1fr; gap:2rem}
+.hb-experiment .stack-panels {gap:.5rem; padding:.5rem}
+.hb-experiment .stack-detail #stack-tabs {display:flex}
+.hb-experiment .stack-detail .stack-panels {grid-template-columns:1fr}
+.hb-experiment .stack-detail .stack-panels figure:not(.stack-active) {display:none}
+.hb-experiment .stack-plot {overflow-x:auto}
+.hb-experiment .stack-plot svg {min-width:660px}
+}
+@media(prefers-reduced-motion:reduce) {
+.hb-experiment .stack-plane {transition:none; animation:none}
+}
+
 </style><link rel="canonical" href="https://measurethepixels.com/handbook/deconvolution.html"></head><body><!-- impeccable-direction
 THESIS: Real image evidence leads; refuse the generic centered AI-product hero.
 OWN-WORLD: Warm observatory paper, charcoal ink, hairline rules, amber instrument marks, condensed editorial type, and flat measured panels.
