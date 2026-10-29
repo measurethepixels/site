@@ -80,36 +80,36 @@
     },
     "full": {
      "crop_xyxy": [
-      177,
-      824,
-      725,
-      1452
+      46,
+      45,
+      992,
+      1824
      ],
      "encoding": "webp-lossy-q92",
      "tiles": [
       {
-       "bytes": 80798,
-       "height": 628,
-       "src": "c437e1cc34aef28e754f85aae9098b10d9026c1d7d4db04fd20600cc154ad4c0.webp",
-       "width": 548
+       "bytes": 49498,
+       "height": 640,
+       "src": "2dd95feb6013583dacf06b32bb323cf513b6d210d4104d643aee2aa6450c4fac.webp",
+       "width": 340
       },
       {
-       "bytes": 93598,
-       "height": 628,
-       "src": "c2fff01e608c8b365db4a0658a3bad248aec29f52952f7dd4e20ba9505b4ff2e.webp",
-       "width": 548
+       "bytes": 48502,
+       "height": 640,
+       "src": "f9bcaaff5f0efb9b3ec251f6a6114574e7a676272d56452fcb483e5d4395aa2f.webp",
+       "width": 340
       },
       {
-       "bytes": 72886,
-       "height": 628,
-       "src": "cd15c1db9003c9071a423128d9b188ce642d4a433cfa41e02e1efc2da1414c36.webp",
-       "width": 548
+       "bytes": 48002,
+       "height": 640,
+       "src": "a660b5a5a2d375005987db8d151d1c5c6289d4d3c0e61cf7aa179d4bec024c40.webp",
+       "width": 340
       },
       {
-       "bytes": 81246,
-       "height": 628,
-       "src": "e79688ea5c584889098a066eecfd696407895c519102677a9b3d199b14d409a1.webp",
-       "width": 548
+       "bytes": 50338,
+       "height": 640,
+       "src": "c90916bf9c855bbce9ffaa787e716a328ab37101a715c8ed382ecbd45345bd0f.webp",
+       "width": 340
       }
      ]
     },
@@ -230,36 +230,36 @@
     },
     "full": {
      "crop_xyxy": [
-      38,
-      920,
-      178,
-      1829
+      11,
+      7,
+      1004,
+      1826
      ],
      "encoding": "webp-lossy-q92",
      "tiles": [
       {
-       "bytes": 24890,
+       "bytes": 91508,
        "height": 640,
-       "src": "a86574f8c4a581b1bf69adf24e2fdaed5a8c98302cf80c7ec4393b5a3e5e34d1.webp",
-       "width": 99
+       "src": "9a0b98cceca12f668f977df2b333fc0c179c640a01ac7122ea78e4452bf08d13.webp",
+       "width": 349
       },
       {
-       "bytes": 25498,
+       "bytes": 90532,
        "height": 640,
-       "src": "e92ef65cbdcbc1d2d6457f9c8f41f4cb663b180d3be73b7a1fdff591ba2e3239.webp",
-       "width": 99
+       "src": "2188a3c24425d85fa6c9b4b6be1156ac104e3f066c3f87258ed14d1b45b2e080.webp",
+       "width": 349
       },
       {
-       "bytes": 23756,
+       "bytes": 86666,
        "height": 640,
-       "src": "f33eaba53b8faf35bf9124348c9828a954165fb0cbf95951e727fb968ac5c619.webp",
-       "width": 99
+       "src": "30827c2308f55ef592ee2add4a5e975f9057790eda3383dc536311c25f75c89d.webp",
+       "width": 349
       },
       {
-       "bytes": 24802,
+       "bytes": 88628,
        "height": 640,
-       "src": "d4e9c1803d087fc944810b0497730bc83bf6c5bb47b36170faad18aea59ab22d.webp",
-       "width": 99
+       "src": "be90efc94ec160d90cdfd35a1acdd44484d42b384cb9cb28ae5ff799e5b0243f.webp",
+       "width": 349
       }
      ]
     },
@@ -380,35 +380,35 @@
     },
     "full": {
      "crop_xyxy": [
-      21,
-      533,
-      1027,
-      1139
+      2,
+      524,
+      1012,
+      1130
      ],
      "encoding": "webp-lossy-q92",
      "tiles": [
       {
-       "bytes": 50856,
-       "height": 386,
-       "src": "ea223d296f869d0ee33aa9b651bfd750826179fb99dc830d0ae9472691306394.webp",
+       "bytes": 50208,
+       "height": 384,
+       "src": "37582fc7167230a7edf76a8b59eaed64434327763989a3a2626dc2b057d211ba.webp",
        "width": 640
       },
       {
-       "bytes": 51328,
-       "height": 386,
-       "src": "72c2542a182435071c0c63c39f59ad0846881935a6fa0a6835ca76e75e24e2d8.webp",
+       "bytes": 51344,
+       "height": 384,
+       "src": "408812fe7e3a1bbb55f3255a81e6f2debefb4ffea14105fe6c129f84c43d96f4.webp",
        "width": 640
       },
       {
-       "bytes": 49644,
-       "height": 386,
-       "src": "c2166d679d90a11d87e9a220176cc2394340804adb9ae9d27127e1a913889d17.webp",
+       "bytes": 48818,
+       "height": 384,
+       "src": "85e1dbc5fb34aa19a9a84221a3a29816a8ef8eb790d9ec4778f2f7d7fd2d129a.webp",
        "width": 640
       },
       {
-       "bytes": 52076,
-       "height": 386,
-       "src": "01d140fbb5d2f9b468941735535bf757d18f67e314ec369f8bd90fe05ee745e1.webp",
+       "bytes": 50770,
+       "height": 384,
+       "src": "79ea6a889793aba3bc0d7516862117ce6d3be55f5bd515cb08b0ea7b4a125822.webp",
        "width": 640
       }
      ]
@@ -530,36 +530,36 @@
     },
     "full": {
      "crop_xyxy": [
-      355,
-      728,
-      662,
-      1145
+      13,
+      14,
+      967,
+      1853
      ],
      "encoding": "webp-lossy-q92",
      "tiles": [
       {
-       "bytes": 33418,
-       "height": 417,
-       "src": "809f6031f8205e85e284721f326d5da5c76be0c1b00350865589216f15a5d8d5.webp",
-       "width": 307
+       "bytes": 53442,
+       "height": 640,
+       "src": "d9a93e9c55267599b943bda56576257243fd9cefde08dd97420a876a551efcce.webp",
+       "width": 332
       },
       {
-       "bytes": 36364,
-       "height": 417,
-       "src": "d961538da773879a3838b929c129b458b4699aa7657b7d3e276570e43ef013a4.webp",
-       "width": 307
+       "bytes": 54882,
+       "height": 640,
+       "src": "41c9cd449f8f4a92f7e971a48a01d4ccc08af1d139a352be5c7e74ad694c5bd9.webp",
+       "width": 332
       },
       {
-       "bytes": 31716,
-       "height": 417,
-       "src": "fc43ee4ff0081248b8bb90ea0cf1df895067049d1630151e3f6ed8b621000dec.webp",
-       "width": 307
+       "bytes": 52808,
+       "height": 640,
+       "src": "14fa9fa08cef8ab76767e8891811de4588bc8bbacb9269f08e0d1273f4a151d9.webp",
+       "width": 332
       },
       {
-       "bytes": 34240,
-       "height": 417,
-       "src": "ae5c0f92408117a0e811f2ca421c8dd4da4dfaebc590e0f0ec61bb032c3b02b9.webp",
-       "width": 307
+       "bytes": 54010,
+       "height": 640,
+       "src": "53add97e39e6a8e27b021f01a59b60b2f72d4b054256eb7c88b8ae9b2f7a08ed.webp",
+       "width": 332
       }
      ]
     },
@@ -680,36 +680,36 @@
     },
     "full": {
      "crop_xyxy": [
-      323,
-      297,
-      759,
-      1246
+      48,
+      400,
+      1022,
+      1138
      ],
      "encoding": "webp-lossy-q92",
      "tiles": [
       {
-       "bytes": 42416,
-       "height": 640,
-       "src": "edcaeaa4a523d8441471b0053148a8a28771b21ea9fdc0507af30a0d3dcd8195.webp",
-       "width": 294
+       "bytes": 63400,
+       "height": 485,
+       "src": "f18d5fc4e746eeff8460769ab56be61464812ce41bff4680d2b5f039b600b875.webp",
+       "width": 640
       },
       {
-       "bytes": 44190,
-       "height": 640,
-       "src": "d512b99b2101d09d66bfe6ed353ac251c2b70bc0786cbaa03d0370d972629680.webp",
-       "width": 294
+       "bytes": 74164,
+       "height": 485,
+       "src": "3330ee237c2f1e85ea87995e2c67f636ed092f54d81c0c7b27711948177bb76c.webp",
+       "width": 640
       },
       {
-       "bytes": 39712,
-       "height": 640,
-       "src": "b92b684f84b670c590dfd49edb429e4ae2f4d36062c251e085df77514fc4b2d3.webp",
-       "width": 294
+       "bytes": 59630,
+       "height": 485,
+       "src": "b9b4f9875471b5611065230645e3c0aef6d7b44d076cbd6b7fc8071487508b96.webp",
+       "width": 640
       },
       {
-       "bytes": 41876,
-       "height": 640,
-       "src": "423d20b0c25e64d6251331f319effd5c6f24f495835e98f1f768e697e141a64c.webp",
-       "width": 294
+       "bytes": 61914,
+       "height": 485,
+       "src": "db76949795885586323ec06b6dd599b4c8ade103a77dee65065f11e6b363398c.webp",
+       "width": 640
       }
      ]
     },
@@ -830,36 +830,36 @@
     },
     "full": {
      "crop_xyxy": [
-      451,
-      242,
-      850,
-      1134
+      170,
+      170,
+      874,
+      1058
      ],
      "encoding": "webp-lossy-q92",
      "tiles": [
       {
-       "bytes": 54664,
+       "bytes": 100684,
        "height": 640,
-       "src": "1b7ad2b2e53ac09eb8a8339e429a3771574e74c3623d97222dcd40c199fb94a5.webp",
-       "width": 286
+       "src": "3924a39ba42a1f16aefaf1802ad19e59d7c850b5f90e62c0702c7d130d069fe0.webp",
+       "width": 507
       },
       {
-       "bytes": 57574,
+       "bytes": 105740,
        "height": 640,
-       "src": "210b963f8694d13eb1a346df0f2898cd6d8f381b731e398e737beecac035b697.webp",
-       "width": 286
+       "src": "f0de86c20c297fc24948e2d845d1dc47332f804987d276f21bbfc733835a9036.webp",
+       "width": 507
       },
       {
-       "bytes": 47908,
+       "bytes": 90040,
        "height": 640,
-       "src": "7024b078a8fc94101d400ee10194496dcd795ed909b906ea2486566691642f87.webp",
-       "width": 286
+       "src": "f6f052e4fb1bb057e54009e14969802915dbcdbba6a5b7c3963f21780e0e6231.webp",
+       "width": 507
       },
       {
-       "bytes": 70336,
+       "bytes": 129236,
        "height": 640,
-       "src": "79f1a7481de548721d3c0e69b010c313b11f763bd7667f1d77799adcfee9a704.webp",
-       "width": 286
+       "src": "6df72e626701a8a692055248f6aabd713a6c58d849abc2a2c4e4c1ddf099bd46.webp",
+       "width": 507
       }
      ]
     },
