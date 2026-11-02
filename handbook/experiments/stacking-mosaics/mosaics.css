@@ -1,0 +1,38 @@
+[data-mosaic-page] .mosaic-hero {max-width:850px; margin:2rem auto 3rem}
+[data-mosaic-page] figure {margin:2rem 0}
+[data-mosaic-page] figure img {display:block; max-width:100%; height:auto; background:#05090d}
+[data-mosaic-page] figcaption {margin:.75rem 0; color:#5d686d; line-height:1.6}
+[data-mosaic-page] .mosaic-layers {position:relative; background:#05090d}
+[data-mosaic-page] .mosaic-layers img[data-layer] {position:absolute; inset:0; width:100%; height:100%}
+[data-mosaic-page] [hidden] {display:none !important}
+[data-mosaic-page] .mosaic-legend {list-style:none; padding:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.25rem 1rem}
+[data-mosaic-page] .mosaic-legend li {border-bottom:1px solid var(--mosaic-engine)}
+[data-mosaic-page] label, [data-mosaic-page] summary {min-height:44px; display:flex; align-items:center; gap:.65rem}
+[data-mosaic-page] summary {display:list-item; padding:.65rem 0; cursor:pointer}
+[data-mosaic-page] input[type=checkbox] {width:22px; height:22px; flex-shrink:0; accent-color:#93610d}
+[data-mosaic-page] select {max-width:100%; min-height:44px; padding:.4rem; background:#f4f0e6; color:#1d2932; border:1px solid #b9ae9b; font:inherit}
+[data-mosaic-page] :is(input,select,summary):focus-visible {outline:2px solid #93610d; outline-offset:4px}
+[data-mosaic-page] .mosaic-static {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; background:#b9ae9b}
+[data-mosaic-page] .mosaic-static img {width:100%}
+[data-mosaic-page] .mosaic-comparison[data-comparison=blend] {max-width:800px}
+[data-mosaic-page] .mosaic-wipe {position:relative; background:#05090d; --divider:50%}
+[data-mosaic-page] .mosaic-wipe img {width:100%}
+[data-mosaic-page] .mosaic-after {position:absolute; inset:0; height:100%; clip-path:inset(0 0 0 50%)}
+[data-mosaic-page] .mosaic-wipe::after {content:""; position:absolute; top:0; bottom:0; left:var(--divider); width:1px; background:#f4f0e6; pointer-events:none}
+[data-mosaic-page] .mosaic-divider {display:grid; grid-template-columns:auto 1fr; padding:.5rem 0}
+[data-mosaic-page] input[type=range] {width:100%; min-width:0; height:44px; accent-color:#93610d}
+[data-mosaic-page] .mosaic-controls {margin-bottom:1rem}
+[data-mosaic-page] .mosaic-controls label {flex-wrap:wrap}
+[data-mosaic-page] .mosaic-pair-labels {font-weight:600}
+[data-mosaic-page] .mosaic-chart svg, [data-mosaic-page] .mosaic-outcomes svg {width:100%; max-width:800px; height:auto; display:block; font:16px 'IBM Plex Sans',sans-serif; fill:#1d2932}
+[data-mosaic-page] .mosaic-tiles svg {width:100%; max-width:420px; display:block; background:#ebe5d8}
+[data-mosaic-page] table {font-variant-numeric:tabular-nums}
+@media(max-width:560px) {
+ [data-mosaic-page] .mosaic-legend {grid-template-columns:1fr}
+ [data-mosaic-page] .mosaic-static {grid-template-columns:1fr}
+ [data-mosaic-page] .mosaic-chart svg, [data-mosaic-page] .mosaic-outcomes svg {min-width:540px}
+ [data-mosaic-page] .mosaic-chart, [data-mosaic-page] .mosaic-outcomes {overflow-x:auto}
+ [data-mosaic-page] .mosaic-divider {grid-template-columns:1fr}
+}
+
+[data-mosaic-page] .mosaic-static-note {grid-column:1 / -1; margin:0; padding:.75rem; background:#f4f0e6}
