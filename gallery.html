@@ -71,6 +71,19 @@ footer{display:grid;grid-template-columns:1fr auto;gap:1rem;max-width:1280px;mar
 @media(max-width:560px){body:before{background-size:48px 48px}.site-nav{padding:.65rem 1rem;gap:.25rem 1rem}.utility-nav{display:none}.primary-nav{gap:1rem}.primary-nav a{display:inline-flex;align-items:center;min-height:44px}main{padding-top:1rem}.hero-copy{padding:.25rem 0 .9rem}.hero-copy h1{font-size:clamp(2.55rem,15vw,3.45rem);margin:.05em 0}.hero-copy .sub{margin:.65rem 0;font-size:1.08rem}.hero-copy .intro{margin:.5rem 0;font-size:.94rem;line-height:1.5}.btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;margin-top:.85rem}.btn{justify-content:center;padding:.45rem .55rem;font-size:.66rem;text-align:center}.hero-media{min-height:68vw}.entry-points .section-head{margin-top:2.6rem}.entry-points .section-intro{font-size:.96rem;line-height:1.5}.door-grid{grid-template-columns:1fr;margin-top:1rem}.door{display:grid;grid-template-columns:minmax(6.5rem,.32fr) 1fr;gap:.8rem;align-items:center;min-height:104px;padding:.9rem 1rem}.door h3{margin:0;font-size:1.35rem}.door p{margin:0;font-size:.88rem;line-height:1.4}.card,.card:nth-child(5n+1){grid-column:1/-1}.evidence-strip{grid-template-columns:1fr 1fr}.evidence-item dd{font-size:.68rem}footer{grid-template-columns:1fr}}
 @media(max-width:340px){.btns{grid-template-columns:1fr}.door{grid-template-columns:1fr;gap:.25rem}.door h3{font-size:1.25rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card img{transition:none}}
+.public-images{--well:#05090d;--accent:#93610d}.image-views{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0 2rem}.image-views a{padding:.6rem 1rem;border:1px solid var(--line);text-decoration:none}.image-views [aria-current=page]{background:var(--ink);color:var(--paper)}
+.public-images [hidden]{display:none!important}.public-images button,.public-images select{min-height:44px;font:inherit}.public-images :focus-visible{outline:3px solid var(--blue);outline-offset:3px}.public-images .publication-count{font-family:var(--mono);color:var(--muted)}
+.public-plate{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:0}.public-plate li{position:relative;min-width:0;border:1px solid var(--line);background:var(--panel);padding:8px;display:flex;flex-direction:column;gap:4px;overflow:hidden}.public-images .dim{opacity:.25}.public-plate a{display:flex;flex-direction:column;text-decoration:none;gap:4px}.public-plate img{width:100%;aspect-ratio:1;object-fit:cover;background:var(--well)}.public-plate strong{font:600 clamp(.8rem,1.4vw,1.15rem) var(--mono)}.public-plate small,.public-plate span{font-size:.72rem;overflow-wrap:anywhere}.public-plate .empty-cell{display:grid;place-items:center;aspect-ratio:1;color:var(--accent);font-size:2rem;background:var(--well)}.public-plate .size-bar{display:block;height:4px;background:var(--line);margin:.3rem 0}.size-bar:after{content:"";display:block;width:calc(100% * var(--size));height:100%;background:var(--accent)}
+.public-images fieldset{display:flex;flex-wrap:wrap;gap:1rem;border:1px solid var(--line);margin:1.5rem 0}.public-images label{display:flex;gap:.5rem;align-items:center}.public-images .sky-chart{margin:2rem 0}.public-images .sky-chart svg{display:block;width:100%;border:1px solid var(--line);background:var(--paper)}.sky-chart .graticule path{stroke:var(--line);stroke-width:1}.sky-chart text{fill:var(--muted);font:12px monospace}.sky-chart .reference-ring{fill:none;stroke:var(--accent)}.sky-chart a circle{stroke:var(--ink);stroke-width:1}.sky-chart .sky-image{clip-path:circle(50%);background:var(--well)}.sky-chart a:hover circle,.sky-chart a:focus circle{stroke:var(--accent);stroke-width:4}
+.public-target-list details{border-top:1px solid var(--line);padding:1rem 0}.public-target-list summary{cursor:pointer;min-height:44px;font:600 1rem var(--mono)}.public-target-list img{display:block;max-width:min(100%,760px);max-height:70vh;object-fit:contain;background:var(--well)}.public-images figcaption{max-width:75ch;color:var(--muted);margin-top:.8rem}
+.public-images .image-panel{position:fixed;inset:0 0 0 auto;box-sizing:border-box;width:min(100%,480px);height:100dvh;max-height:100dvh;margin:0;border:0;border-left:1px solid var(--line);padding:1.2rem;background:var(--paper);color:var(--ink);overflow:auto}.image-panel::backdrop{background:rgba(5,9,13,.55)}.image-panel img{display:block;width:100%;max-height:60vh;object-fit:contain;background:var(--well)}.image-panel button{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:.5rem .8rem}.image-panel [data-close]{float:right}.image-panel h2{clear:both;padding-top:1rem}
+@media(min-width:650px){.public-plate{grid-template-columns:repeat(6,minmax(0,1fr))}}@media(min-width:960px){.public-plate{grid-template-columns:repeat(8,minmax(0,1fr))}}@media(max-width:760px),(max-height:540px){.public-images .image-panel{inset:auto 0 0;width:100%;height:min(86dvh,800px);border-top:1px solid var(--line)}}
+@media(prefers-reduced-motion:reduce){.public-images *{scroll-behavior:auto}}
+
+.public-plate [data-span="2"]{grid-column:span 2;grid-row:span 2}
+
+.public-plate .plate-fact{justify-content:center;background:transparent;border-style:dashed;color:var(--accent)}
+.public-images .sky-chart svg{overflow:visible}
 </style><link rel="canonical" href="https://measurethepixels.com/gallery.html"></head><body><!-- impeccable-direction
 THESIS: Real image evidence leads; refuse the generic centered AI-product hero.
 OWN-WORLD: Warm observatory paper, charcoal ink, hairline rules, amber instrument marks, condensed editorial type, and flat measured panels.
@@ -78,127 +91,127 @@ STORY: See the result, understand NOVA's bounded loop, inspect its method, then 
 FIRST VIEWPORT: A compact thesis and action occupy the left third; the current real image dominates the right; its measured facts form the baseline.
 FORM: Scientific editorial field note, pinned by Jeff as Observatory Notebook meets modern engineering lab.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
---><a class="skip-link" href="#content">Skip to content</a><nav class="site-nav" aria-label="Primary"><a class="brand" href="/"><img class="brand-mark" src="/nova-star.png" alt="">Measure the Pixels</a><div class="primary-nav"><a href="gallery.html" aria-current="page">Images</a><a href="about.html">NOVA</a><a href="handbook/index.html">Handbook</a><a href="validation/index.html">Validation</a><a href="changelog.html">Build Log</a></div><div class="utility-nav"><a href="https://www.youtube.com/@measurethepixels">YouTube ↗</a><a href="https://github.com/measurethepixels/nova">GitHub ↗</a></div></nav><main id="content"><h1>Image evidence</h1><p class="section-intro">NOVA's best published final per target. Each score is NOVA's recorded assessment out of 10. Captured on a SeeStar S50; processed and assessed autonomously.</p><div class="grid"><article class="card"><figure><img src="img/m-51.jpg" alt="M 51" loading="lazy"></figure>
+--><a class="skip-link" href="#content">Skip to content</a><nav class="site-nav" aria-label="Primary"><a class="brand" href="/"><img class="brand-mark" src="/nova-star.png" alt="">Measure the Pixels</a><div class="primary-nav"><a href="gallery.html" aria-current="page">Images</a><a href="about.html">NOVA</a><a href="handbook/index.html">Handbook</a><a href="validation/index.html">Validation</a><a href="changelog.html">Build Log</a></div><div class="utility-nav"><a href="https://www.youtube.com/@measurethepixels">YouTube ↗</a><a href="https://github.com/measurethepixels/nova">GitHub ↗</a></div></nav><main id="content"><nav class="image-views" aria-label="Image views"><a href="gallery.html" aria-current="page">Gallery</a><a href="images/sky.html">Sky Atlas</a><a href="images/messier.html">Messier Plate</a></nav><h1>Image evidence</h1><p class="section-intro">NOVA's best published final per target. Each score is NOVA's recorded assessment out of 10. Captured on a SeeStar S50; processed and assessed autonomously.</p><p>Showing 60 of 80 published targets.</p><div class="grid"><article class="card"><figure><img src="img/m-51.jpg" alt="M 51" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 51</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 9.0</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260604_143439_seestar_galaxy/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/m-31.jpg" alt="M 31" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 31</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.6</span></div></article><article class="card"><figure><img src="img/ngc-7000.jpg" alt="NGC 7000" loading="lazy"></figure>
-<div class="meta"><h2 class="t">NGC 7000</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.5</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260706_231636_seestar_nebula/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/ngc-2244-satellite-cluster.jpg" alt="NGC 2244 Satellite Cluster" loading="lazy"></figure>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.6</span></div></article><article class="card"><figure><img src="img/ngc-2244-satellite-cluster.jpg" alt="NGC 2244 Satellite Cluster" loading="lazy"></figure>
 <div class="meta"><h2 class="t">NGC 2244 Satellite Cluster</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.5</span></div></article><article class="card"><figure><img src="img/m-66.jpg" alt="M 66" loading="lazy"></figure>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.5</span></div></article><article class="card"><figure><img src="img/ngc-7000.jpg" alt="NGC 7000" loading="lazy"></figure>
+<div class="meta"><h2 class="t">NGC 7000</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.5</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260706_231636_seestar_nebula/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/m-66.jpg" alt="M 66" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 66</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.3</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260715_194614_seestar_galaxy/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/m-42.jpg" alt="M 42" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 42</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/m-8.jpg" alt="M 8" loading="lazy"></figure>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.3</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260715_194614_seestar_galaxy/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/m-8.jpg" alt="M 8" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 8</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/ic-1805.jpg" alt="IC 1805" loading="lazy"></figure>
-<div class="meta"><h2 class="t">IC 1805</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260611_143236_seestar_nebula/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/m-101.jpg" alt="M 101" loading="lazy"></figure>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/m-101.jpg" alt="M 101" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 101</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/m-42.jpg" alt="M 42" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 42</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/m-45.jpg" alt="M 45" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 45</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/ngc-2359.jpg" alt="NGC 2359" loading="lazy"></figure>
-<div class="meta"><h2 class="t">NGC 2359</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260711_021336_seestar_nebula/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/m-13.jpg" alt="M 13" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 13</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-27.jpg" alt="M 27" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 27</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/ngc-6888.jpg" alt="NGC 6888" loading="lazy"></figure>
-<div class="meta"><h2 class="t">NGC 6888</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-16.jpg" alt="M 16" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 16</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div></article><article class="card"><figure><img src="img/ic-1805.jpg" alt="IC 1805" loading="lazy"></figure>
+<div class="meta"><h2 class="t">IC 1805</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 8.2</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260611_143236_seestar_nebula/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/ngc-7635.jpg" alt="NGC 7635" loading="lazy"></figure>
+<div class="meta"><h2 class="t">NGC 7635</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-83.jpg" alt="M 83" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 83</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-16.jpg" alt="M 16" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 16</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/ngc-6888.jpg" alt="NGC 6888" loading="lazy"></figure>
+<div class="meta"><h2 class="t">NGC 6888</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-81.jpg" alt="M 81" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 81</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/sh-2-298.jpg" alt="SH 2-298" loading="lazy"></figure>
-<div class="meta"><h2 class="t">SH 2-298</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/ngc-7635.jpg" alt="NGC 7635" loading="lazy"></figure>
-<div class="meta"><h2 class="t">NGC 7635</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-20.jpg" alt="M 20" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 20</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-33.jpg" alt="M 33" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 33</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-2.jpg" alt="M 2" loading="lazy"></figure>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-27.jpg" alt="M 27" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 27</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-13.jpg" alt="M 13" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 13</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/m-20.jpg" alt="M 20" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 20</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/sh-2-298.jpg" alt="SH 2-298" loading="lazy"></figure>
+<div class="meta"><h2 class="t">SH 2-298</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div></article><article class="card"><figure><img src="img/ngc-2359.jpg" alt="NGC 2359" loading="lazy"></figure>
+<div class="meta"><h2 class="t">NGC 2359</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.8</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260711_021336_seestar_nebula/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/m-50.jpg" alt="M 50" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 50</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.4</span></div></article><article class="card"><figure><img src="img/m-36.jpg" alt="M 36" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 36</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.3</span></div></article><article class="card"><figure><img src="img/m-93.jpg" alt="M 93" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 93</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.3</span></div></article><article class="card"><figure><img src="img/m-2.jpg" alt="M 2" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 2</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.3</span></div></article><article class="card"><figure><img src="img/ngc-7331.jpg" alt="NGC 7331" loading="lazy"></figure>
-<div class="meta"><h2 class="t">NGC 7331</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-92.jpg" alt="M 92" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 92</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ic-342.jpg" alt="IC 342" loading="lazy"></figure>
-<div class="meta"><h2 class="t">IC 342</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-15.jpg" alt="M 15" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 15</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-109.jpg" alt="M 109" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 109</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-56.jpg" alt="M 56" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 56</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ic-1396.jpg" alt="IC 1396" loading="lazy"></figure>
-<div class="meta"><h2 class="t">IC 1396</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/sh-2-142.jpg" alt="SH 2- 142" loading="lazy"></figure>
-<div class="meta"><h2 class="t">SH 2- 142</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ngc-2175.jpg" alt="NGC 2175" loading="lazy"></figure>
-<div class="meta"><h2 class="t">NGC 2175</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.3</span></div></article><article class="card"><figure><img src="img/c-80.jpg" alt="C 80" loading="lazy"></figure>
+<div class="meta"><h2 class="t">C 80</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ngc-7023.jpg" alt="NGC 7023" loading="lazy"></figure>
 <div class="meta"><h2 class="t">NGC 7023</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ngc-6914.jpg" alt="NGC 6914" loading="lazy"></figure>
-<div class="meta"><h2 class="t">NGC 6914</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ngc-4565.jpg" alt="NGC 4565" loading="lazy"></figure>
-<div class="meta"><h2 class="t">NGC 4565</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ngc-188.jpg" alt="NGC 188" loading="lazy"></figure>
-<div class="meta"><h2 class="t">NGC 188</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/c-77.jpg" alt="C 77" loading="lazy"></figure>
-<div class="meta"><h2 class="t">C 77</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/sh2-101.jpg" alt="SH2-101" loading="lazy"></figure>
-<div class="meta"><h2 class="t">SH2-101</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-17.jpg" alt="M 17" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 17</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/c-9.jpg" alt="C 9" loading="lazy"></figure>
-<div class="meta"><h2 class="t">C 9</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-3.jpg" alt="M 3" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 3</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/c-80.jpg" alt="C 80" loading="lazy"></figure>
-<div class="meta"><h2 class="t">C 80</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-57.jpg" alt="M 57" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 57</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-1.jpg" alt="M 1" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 1</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260722_063635_seestar_broadband/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/m-38.jpg" alt="M 38" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 38</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 7.0</span></div></article><article class="card"><figure><img src="img/m-52.jpg" alt="M 52" loading="lazy"></figure>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260722_063635_seestar_broadband/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/sh2-101.jpg" alt="SH2-101" loading="lazy"></figure>
+<div class="meta"><h2 class="t">SH2-101</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-109.jpg" alt="M 109" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 109</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ngc-2175.jpg" alt="NGC 2175" loading="lazy"></figure>
+<div class="meta"><h2 class="t">NGC 2175</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ngc-4565.jpg" alt="NGC 4565" loading="lazy"></figure>
+<div class="meta"><h2 class="t">NGC 4565</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/c-9.jpg" alt="C 9" loading="lazy"></figure>
+<div class="meta"><h2 class="t">C 9</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/sh-2-142.jpg" alt="SH 2- 142" loading="lazy"></figure>
+<div class="meta"><h2 class="t">SH 2- 142</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ngc-6914.jpg" alt="NGC 6914" loading="lazy"></figure>
+<div class="meta"><h2 class="t">NGC 6914</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/c-77.jpg" alt="C 77" loading="lazy"></figure>
+<div class="meta"><h2 class="t">C 77</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-56.jpg" alt="M 56" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 56</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-92.jpg" alt="M 92" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 92</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ngc-7331.jpg" alt="NGC 7331" loading="lazy"></figure>
+<div class="meta"><h2 class="t">NGC 7331</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-15.jpg" alt="M 15" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 15</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ngc-188.jpg" alt="NGC 188" loading="lazy"></figure>
+<div class="meta"><h2 class="t">NGC 188</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ic-342.jpg" alt="IC 342" loading="lazy"></figure>
+<div class="meta"><h2 class="t">IC 342</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-3.jpg" alt="M 3" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 3</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-106.jpg" alt="M 106" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 106</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-17.jpg" alt="M 17" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 17</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-57.jpg" alt="M 57" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 57</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/ic-1396.jpg" alt="IC 1396" loading="lazy"></figure>
+<div class="meta"><h2 class="t">IC 1396</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.2</span></div></article><article class="card"><figure><img src="img/m-52.jpg" alt="M 52" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 52</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 7.0</span></div></article><article class="card"><figure><img src="img/m-97.jpg" alt="M 97" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 97</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 7.0</span></div></article><article class="card"><figure><img src="img/sh-2-273.jpg" alt="SH 2- 273" loading="lazy"></figure>
 <div class="meta"><h2 class="t">SH 2- 273</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.0</span></div></article><article class="card"><figure><img src="img/m-37.jpg" alt="M 37" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 37</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 7.0</span></div></article><article class="card"><figure><img src="img/m-38.jpg" alt="M 38" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 38</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 7.0</span></div></article><article class="card"><figure><img src="img/m-12.jpg" alt="M 12" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 12</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 6.8</span></div></article><article class="card"><figure><img src="img/m-100.jpg" alt="M 100" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 100</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 6.8</span></div></article><article class="card"><figure><img src="img/ngc-6334.jpg" alt="NGC 6334" loading="lazy"></figure>
 <div class="meta"><h2 class="t">NGC 6334</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 6.8</span></div></article><article class="card"><figure><img src="img/m-94.jpg" alt="M 94" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 94</h2>
 <span class="s" title="NOVA's recorded assessment">NOVA / 6.8</span></div></article><article class="card"><figure><img src="img/m-105.jpg" alt="M 105" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 105</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 6.8</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260605_030216_seestar_galaxy/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/m-94.jpg" alt="M 94" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 94</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 6.8</span></div></article><article class="card"><figure><img src="img/m-71.jpg" alt="M 71" loading="lazy"></figure>
+<span class="s" title="NOVA's recorded assessment">NOVA / 6.8</span></div><div class="card-foot"><a class="recipe-link" href="/recipes/20260605_030216_seestar_galaxy/">Episode recipe →</a></div></article><article class="card"><figure><img src="img/m-71.jpg" alt="M 71" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 71</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 6.7</span></div></article><article class="card"><figure><img src="img/m-39.jpg" alt="M 39" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 39</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 6.6</span></div></article><article class="card"><figure><img src="img/m-102.jpg" alt="M 102" loading="lazy"></figure>
+<span class="s" title="NOVA's recorded assessment">NOVA / 6.7</span></div></article><article class="card"><figure><img src="img/m-102.jpg" alt="M 102" loading="lazy"></figure>
 <div class="meta"><h2 class="t">M 102</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 6.6</span></div></article><article class="card"><figure><img src="img/m-76.jpg" alt="M 76" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 76</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 6.3</span></div></article><article class="card"><figure><img src="img/m-34.jpg" alt="M 34" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 34</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 6.3</span></div></article><article class="card"><figure><img src="img/m-36.jpg" alt="M 36" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 36</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 6.3</span></div></article><article class="card"><figure><img src="img/m-91.jpg" alt="M 91" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 91</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 6.3</span></div></article><article class="card"><figure><img src="img/m-29.jpg" alt="M 29" loading="lazy"></figure>
-<div class="meta"><h2 class="t">M 29</h2>
-<span class="s" title="NOVA's recorded assessment">NOVA / 6.3</span></div></article></div></main><footer><div>NOVA / bounded decisions · recorded evidence · human review<br>
+<span class="s" title="NOVA's recorded assessment">NOVA / 6.6</span></div></article><article class="card"><figure><img src="img/m-35.jpg" alt="M 35" loading="lazy"></figure>
+<div class="meta"><h2 class="t">M 35</h2>
+<span class="s" title="NOVA's recorded assessment">NOVA / 6.6</span></div></article></div></main><footer><div>NOVA / bounded decisions · recorded evidence · human review<br>
 <a href="https://github.com/measurethepixels/nova">GitHub</a> · <a href="https://www.youtube.com/@measurethepixels">YouTube</a> · <a href="privacy.html">Privacy</a></div>
 <div class="footer-tag">Measure the pixels. Make the call.<br>
 © 2026 Jeff Henry. Measure the Pixels™. All rights reserved.</div></footer></body></html>
