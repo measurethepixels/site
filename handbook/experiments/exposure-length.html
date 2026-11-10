@@ -1,0 +1,209 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/"><title>10, 20 or 30 seconds? Two filters, one Seestar.</title><meta name="description" content="NOVA measures, processes, and explains deep-sky images."><meta name="theme-color" content="#f4f0e6"><meta property="og:type" content="website"><meta property="og:site_name" content="Measure the Pixels"><meta property="og:title" content="10, 20 or 30 seconds? Two filters, one Seestar."><meta property="og:description" content="NOVA measures, processes, and explains deep-sky images."><meta property="og:image" content="https://measurethepixels.com/social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/nova-star.png" type="image/png"><style>
+@font-face{font-family:"IBM Plex Sans";src:url("/fonts/IBMPlexSans-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Sans Condensed";src:url("/fonts/IBMPlexSansCondensed-SemiBold.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"IBM Plex Sans Condensed";src:url("/fonts/IBMPlexSansCondensed-Bold.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url("/fonts/IBMPlexMono-SemiBold.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+:root{--ink:#1d2932;--paper:#f4f0e6;--panel:#ebe5d8;--panel2:#e1d8c7;
+--line:#b9ae9b;--line2:#d9d0c0;--muted:#5d686d;--blue:#255f8e;--amber:#93610d;
+--green:#28694f;--display:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;
+--body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+--mono:"IBM Plex Mono","SFMono-Regular",Consolas,monospace}
+*{box-sizing:border-box}html{background:var(--paper);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--body)}
+::selection{background:var(--amber);color:var(--paper)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.38;
+background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);
+background-size:72px 72px;mask-image:linear-gradient(to bottom,#000,transparent 68%);z-index:-1}
+a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{color:var(--ink)}
+a:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+.skip-link{position:fixed;left:1rem;top:1rem;z-index:100;transform:translateY(-180%);padding:.65rem .9rem;background:var(--amber);color:var(--paper);font:700 .75rem/1 var(--mono);text-transform:uppercase}
+.skip-link:focus{transform:none;color:var(--paper)}
+.site-nav{position:sticky;top:0;display:grid;grid-template-columns:minmax(210px,1fr) auto auto;
+align-items:center;gap:1.5rem;padding:.75rem max(1.2rem,calc((100vw - 1280px)/2));background:rgba(244,240,230,.96);
+border-bottom:1px solid var(--line);backdrop-filter:blur(12px);z-index:20}
+.brand{display:inline-flex;align-items:center;color:var(--ink);font:700 .83rem/1 var(--mono);letter-spacing:.12em;text-decoration:none;text-transform:uppercase}
+.brand-mark{display:block;flex:0 0 1.8rem;width:1.8rem;height:1.8rem;margin-right:.55rem;filter:brightness(.34) saturate(.72) contrast(1.45)}
+.primary-nav,.utility-nav{display:flex;align-items:center;gap:1.3rem}.site-nav a{text-decoration:none}
+.primary-nav a{color:var(--muted);font:600 .72rem/1 var(--mono);letter-spacing:.11em;text-transform:uppercase}
+.primary-nav a:hover,.primary-nav a[aria-current="page"]{color:var(--ink)}
+.primary-nav a[aria-current="page"]:after{content:"";display:block;margin-top:.45rem;border-bottom:2px solid var(--amber)}
+.utility-nav{gap:.8rem}.utility-nav a{color:var(--muted);font:500 .68rem/1 var(--mono);text-transform:uppercase}
+main{max-width:1280px;margin:0 auto;padding:clamp(1.4rem,4vw,4rem) clamp(1rem,3vw,2.2rem)}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(2.8rem,7vw,6.8rem);font-weight:700;margin:.15em 0}
+h2{font-size:clamp(1.7rem,3vw,2.7rem);margin:2.2rem 0 .75rem}h3{font-size:1.25rem}
+.section-head{position:relative;border-top:1px solid var(--line);padding-top:1rem;margin-top:4rem}
+.section-head:before{content:"";position:absolute;left:-9px;top:-9px;width:18px;height:18px;background:url("/nova-star.png") center/contain no-repeat}
+.section-head h2{margin:0}.section-intro{max-width:54rem;color:var(--muted);font-size:1.08rem}
+.hero{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(420px,1.28fr);min-height:clamp(520px,65vh,650px);border-bottom:1px solid var(--line)}
+.hero-copy{padding:clamp(1rem,3vw,2.8rem) clamp(1rem,4vw,3.8rem) 2rem 0;align-self:center}
+.hero-copy h1 span{display:block}.hero-copy h1 .measure{font-size:.32em;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.hero-copy .sub{max-width:32rem;font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.45;margin:1.4rem 0;color:var(--ink)}
+.hero-copy .intro{max-width:34rem;color:var(--muted)}
+.hero-media{position:relative;min-height:460px;background:#05090d;overflow:hidden;border-left:1px solid var(--line)}
+.hero-photo{width:100%;height:100%;object-fit:cover;display:block}.hero-media:before,.hero-media:after{content:"";position:absolute;pointer-events:none}
+@media(min-width:851px){.hero-media{max-height:clamp(520px,65vh,650px)}.hero-photo{height:auto;max-height:clamp(520px,65vh,650px)}}
+.hero-media:before{inset:1.2rem;border:1px solid rgba(240,238,231,.34)}
+.hero-media:after{left:50%;top:1.2rem;bottom:1.2rem;border-left:1px solid rgba(240,238,231,.18)}
+.image-label{position:absolute;top:2rem;left:2rem;padding:.45rem .65rem;background:rgba(5,9,13,.82);font:600 .67rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase}
+.nova-star-overlay{position:absolute;right:1.45rem;bottom:1.45rem;width:24px;height:24px;opacity:.78;filter:drop-shadow(0 2px 5px rgba(5,9,13,.55))}
+.assessment-note{max-width:75ch;overflow-wrap:anywhere}
+.evidence-strip{position:relative;display:grid;grid-template-columns:repeat(var(--evidence-count,5),minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(244,240,230,.88)}
+.evidence-strip:before{content:"";position:absolute;left:-9px;top:-9px;width:18px;height:18px;background:url("/nova-star.png") center/contain no-repeat}
+.evidence-item{min-width:0;padding:.8rem 1rem;border-right:1px solid var(--line)}.evidence-item:last-child{border-right:0}
+.evidence-item dt{color:var(--muted);font:500 .58rem/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.evidence-item dd{margin:.3rem 0 0;color:var(--ink);font:600 .76rem/1.3 var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.evidence-item.decision .value{color:var(--green)}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.6rem}.btn{display:inline-flex;align-items:center;min-height:44px;padding:.58rem .85rem;border:1px solid var(--line);border-radius:2px;color:var(--ink);font:600 .7rem/1.2 var(--mono);letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+.btn:hover{background:var(--ink);color:var(--paper)}.btn.primary{border-color:var(--amber);color:var(--amber)}
+.notice{margin:2rem 0;padding:1rem 1.2rem;border:1px solid var(--line);background:var(--panel);color:var(--muted)}.notice strong{color:var(--ink)}
+.video-embed{position:relative;width:100%;max-width:960px;aspect-ratio:16/9;margin-top:1.5rem;border:1px solid var(--line);background:#05090d}.video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.door-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:1.5rem}
+.door{min-height:220px;padding:1.4rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;position:relative;background:rgba(235,229,216,.72)}
+.door:hover{background:var(--panel2);color:var(--ink)}.door .num{color:var(--amber);font:600 .65rem var(--mono)}.door h3{font-size:2rem;margin:2.3rem 0 .6rem}.door p{max-width:28rem;color:var(--muted)}.door .arrow{position:absolute;right:1.4rem;top:1.2rem;color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.5rem}
+.card{grid-column:span 4;background:var(--panel);overflow:hidden}.card:nth-child(5n+1){grid-column:span 8}.card figure{margin:0;position:relative;overflow:hidden}.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .35s ease}.card:hover img{transform:scale(1.015)}
+.card:nth-child(5n+1) img{aspect-ratio:2/1}.card .meta{padding:.85rem 1rem;display:flex;justify-content:space-between;gap:1rem;align-items:baseline}.card .t{margin:0;font:600 1rem/1.3 var(--body);letter-spacing:0}.card .s{color:var(--amber);font:600 .75rem var(--mono)}
+.card-foot{display:flex;align-items:center;min-height:44px;padding:.55rem 1rem;border-top:1px solid var(--line2)}.recipe-link{font:600 .65rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.prose{max-width:790px}.prose p{margin:.9rem 0}.prose li{margin:.4rem 0 .4rem 1.2rem}.prose h2{margin-top:2.6rem}.prose h3{margin:1.6rem 0 .45rem}.prose code{background:var(--panel);border:1px solid var(--line);padding:.1rem .35rem;border-radius:2px;font-size:.9em}
+.console-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}.console-intro .prose{font-size:1.08rem}.loop{font:600 clamp(1rem,2vw,1.45rem)/1.8 var(--mono);color:var(--blue);border-left:1px solid var(--line);padding-left:2rem}.loop span{color:var(--amber)}
+footer{display:grid;grid-template-columns:1fr auto;gap:1rem;max-width:1280px;margin:4rem auto 0;padding:1.5rem clamp(1rem,3vw,2.2rem) 2.5rem;border-top:1px solid var(--line);color:var(--muted);font:.68rem/1.6 var(--mono);text-transform:uppercase}.footer-tag{color:var(--ink);letter-spacing:.08em}
+@media(max-width:850px){.site-nav{grid-template-columns:1fr auto}.primary-nav{grid-column:1/-1;grid-row:2;overflow:auto;padding:.3rem 0}.utility-nav{justify-self:end}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding-right:0}.hero-media{border-left:0;border-top:1px solid var(--line);min-height:58vw}.card,.card:nth-child(5n+1){grid-column:span 6}.card:nth-child(5n+1) img{aspect-ratio:4/3}.console-intro{grid-template-columns:1fr}.loop{border-left:0;border-top:1px solid var(--line);padding:1.3rem 0 0}.evidence-strip{grid-template-columns:repeat(2,1fr)}.evidence-item{border-bottom:1px solid var(--line)} }
+@media(max-width:560px){body:before{background-size:48px 48px}.site-nav{padding:.65rem 1rem;gap:.25rem 1rem}.utility-nav{display:none}.primary-nav{gap:1rem}.primary-nav a{display:inline-flex;align-items:center;min-height:44px}main{padding-top:1rem}.hero-copy{padding:.25rem 0 .9rem}.hero-copy h1{font-size:clamp(2.55rem,15vw,3.45rem);margin:.05em 0}.hero-copy .sub{margin:.65rem 0;font-size:1.08rem}.hero-copy .intro{margin:.5rem 0;font-size:.94rem;line-height:1.5}.btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;margin-top:.85rem}.btn{justify-content:center;padding:.45rem .55rem;font-size:.66rem;text-align:center}.hero-media{min-height:68vw}.entry-points .section-head{margin-top:2.6rem}.entry-points .section-intro{font-size:.96rem;line-height:1.5}.door-grid{grid-template-columns:1fr;margin-top:1rem}.door{display:grid;grid-template-columns:minmax(6.5rem,.32fr) 1fr;gap:.8rem;align-items:center;min-height:104px;padding:.9rem 1rem}.door h3{margin:0;font-size:1.35rem}.door p{margin:0;font-size:.88rem;line-height:1.4}.card,.card:nth-child(5n+1){grid-column:1/-1}.evidence-strip{grid-template-columns:1fr 1fr}.evidence-item dd{font-size:.68rem}footer{grid-template-columns:1fr}}
+@media(max-width:340px){.btns{grid-template-columns:1fr}.door{grid-template-columns:1fr;gap:.25rem}.door h3{font-size:1.25rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card img{transition:none}}
+
+.hb-head{max-width:850px;margin:0 auto 1.5rem}.hb-head p{color:var(--text2,var(--mute))}
+.hb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.hb-card{border:1px solid var(--border);border-radius:10px;padding:1rem;background:var(--bg2,var(--card))}
+.hb-card h2{margin-top:0}.hb-card span,.hb-head span{color:var(--text2,var(--mute))}
+.hb-two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.hb-matrix,.hb-diagnostics{width:100%;border-collapse:collapse}
+.hb-matrix th,.hb-matrix td,.hb-diagnostics th,.hb-diagnostics td{padding:.55rem;border:1px solid var(--border);vertical-align:top;text-align:left}
+.hb-variant{margin:0 0 1.1rem}.hb-variant:last-child{margin-bottom:0}
+.hb-variant+.hb-variant{padding-top:1.1rem;border-top:1px dashed var(--border)}
+.hb-variant h3{margin:0 0 .5rem}.hb-variant h3 small{color:var(--text2,var(--mute));font-weight:400}
+.hb-variant h4{margin:.8rem 0 .3rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;opacity:.85}
+.hb-variant ol,.hb-variant ul,section ul{padding-left:1.3rem}
+.hb-controls{display:grid;grid-template-columns:minmax(10rem,1fr) 2fr;gap:.35rem 1rem}
+.hb-controls dt{font-weight:700}.hb-controls dd{margin:0}.empty{color:var(--text2,var(--mute))}
+.hb-validation{color:var(--gold,#d2a528)}.hb-validated{color:#43c97b}
+.hb-foundations{margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.hb-foundation-card{border-color:var(--gold,#d2a528)}.hb-claim span{color:var(--text2,var(--mute));font-size:.85rem}
+.hb-phases{display:flex;flex-direction:column;gap:1.75rem}
+.hb-phase{border:1px solid var(--border);border-radius:12px;padding:1.25rem;background:var(--bg1,transparent)}
+.hb-phase>p{margin:0 0 1rem;color:var(--text2,var(--mute))}
+.hb-phase-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.15rem}
+.hb-phase-head h2{margin:0}
+.hb-phase-num{display:inline-flex;align-items:center;justify-content:center;width:1.8rem;height:1.8rem;
+  border-radius:50%;background:var(--gold,#d2a528);color:#111;font-weight:700;flex:none}
+@media(max-width:720px){.hb-two{grid-template-columns:1fr}.hb-matrix{font-size:.8rem}}
+
+.tools .ttabs{display:flex;gap:4px;margin-bottom:8px;flex-wrap:wrap}
+.ttab{background:rgba(128,128,128,.12);border:1px solid rgba(128,128,128,.3);
+  color:inherit;padding:5px 12px;border-radius:7px 7px 0 0;cursor:pointer;font-size:.85rem}
+.ttab.active{background:rgba(88,166,255,.18);border-color:rgba(88,166,255,.5);color:#58a6ff}
+.tpane{display:none;font-size:.9rem;line-height:1.5;background:rgba(0,0,0,.15);
+  padding:12px 14px;border-radius:0 8px 8px 8px}
+.tpane.active{display:block}
+.tpane ol{margin:.3rem 0 .3rem 1.1rem}.tpane li{margin:.25rem 0}
+.tpane code{background:rgba(128,128,128,.2);padding:1px 5px;border-radius:4px}
+
+.ba-slider { position: relative; overflow: hidden; border-radius: 8px; cursor: ew-resize;
+             user-select: none; border: 1px solid var(--border); }
+.ba-slider .ba-after { display: block; width: 100%; }
+.ba-slider .ba-before { position: absolute; top: 0; left: 0; width: 100%;
+                        clip-path: inset(0 50% 0 0); pointer-events: none; }
+.ba-slider .ba-divider { position: absolute; top: 0; left: 50%; width: 2px; height: 100%;
+                         background: rgba(255,255,255,.8); pointer-events: none;
+                         transform: translateX(-50%); }
+.ba-slider .ba-lbl { position: absolute; top: 8px; background: rgba(0,0,0,.65); color: #fff;
+                     font-size: .62rem; padding: 1px 6px; border-radius: 3px;
+                     pointer-events: none; letter-spacing: .05em; text-transform: uppercase; }
+.ba-slider .ba-lbl-l { left: 8px; }
+.ba-slider .ba-lbl-r { right: 8px; }
+.ba-slider .ba-range { position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                       opacity: 0; cursor: ew-resize; margin: 0; }
+.ba-cap { font-size: .76rem; color: var(--text2); margin-top: .4rem; font-style: italic; }
+
+.hb-experiment p,.hb-experiment li {max-width:75ch; overflow-wrap:anywhere}
+.hb-experiment h1 {font-size:clamp(2.5rem,6vw,4rem)}
+.hb-experiment code {overflow-wrap:anywhere}
+.hb-experiment section {margin-top:3rem}
+.hb-experiment .experiment-table {overflow-x:auto; margin:1rem 0; scrollbar-color:var(--muted) var(--paper)}
+.hb-experiment table {border-collapse:collapse; width:100%; font-variant-numeric:tabular-nums}
+.hb-experiment th,.hb-experiment td {padding:.65rem; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
+.hb-experiment th {font-weight:600}
+.hb-experiment caption {text-align:left; margin-bottom:.75rem}
+.hb-experiment nav ul {display:flex; flex-wrap:wrap; gap:.5rem 1.2rem; padding:0; list-style:none}
+.hb-experiment nav a {display:inline-block; padding:.5rem 0; min-height:44px; box-sizing:border-box}
+.hb-experiment :focus-visible {outline:2px solid var(--amber); outline-offset:4px}
+.hb-experiment section {scroll-margin-top:6rem}
+.hb-experiment .experiment-figures {display:grid; gap:1.5rem; margin:1.5rem 0}
+.hb-experiment .experiment-figures.grid {grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.hb-experiment figure {margin:0}
+.hb-experiment figure img {display:block; width:100%; height:auto; border:1px solid var(--line); background:#080a0e}
+.hb-experiment figcaption {margin-top:.6rem; font-size:.92rem; color:var(--muted); max-width:75ch}
+.hb-experiment details {margin-top:.5rem}
+.hb-experiment summary {cursor:pointer; min-height:44px; display:flex; align-items:center; color:var(--ink); font-weight:600}
+.hb-experiment .hb-head {max-width:none; margin-left:0}
+.hb-experiment .stack-subtitle {font-size:1.25rem; max-width:55ch}
+.hb-experiment .stack-opening {margin:2rem 0; background:#080a0e; color:#f4f0e6}
+.hb-experiment .stack-opening figcaption a {color:#8bc8f3; text-decoration:underline}
+.hb-experiment .stack-opening figcaption {padding:.8rem 1rem; color:#f4f0e6}
+.hb-experiment .stack-findings {display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin:3rem 0}
+.hb-experiment .stack-findings a {display:flex; flex-direction:column; gap:1rem; padding-top:1rem; border-top:1px solid var(--line); color:var(--ink); text-decoration:none}
+.hb-experiment .stack-findings strong {font-size:clamp(1.4rem,3vw,2.3rem); line-height:1.1}
+.hb-experiment .stack-findings svg {width:100%; height:60px; margin-top:auto}
+.hb-experiment .stack-controls {display:flex; flex-wrap:wrap; align-items:center; gap:.65rem; margin:1rem 0}
+.hb-experiment .stack-controls button,.hb-experiment .stack-controls select {min-height:44px; padding:.5rem .75rem; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:2px; font:inherit; cursor:pointer}
+.hb-experiment .stack-controls label {display:flex; align-items:center; gap:.5rem}
+.hb-experiment .stack-controls button:hover,.hb-experiment .stack-controls button[aria-pressed=true] {background:var(--ink); color:var(--paper)}
+.hb-experiment .stack-controls button:disabled {opacity:.5; cursor:default}
+.hb-experiment .stack-panels {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; background:#080a0e; padding:1rem}
+.hb-experiment .stack-panels figure {min-width:0; border:1px solid var(--engine,#b9ae9b)}
+.hb-experiment .stack-panels figcaption {color:#f4f0e6; margin:0; padding:.5rem .75rem; border-bottom:1px solid var(--engine,#b9ae9b)}
+.hb-experiment .stack-surface {overflow:hidden; position:relative; touch-action:pan-y pinch-zoom; cursor:crosshair}
+.hb-experiment .stack-pan-enabled .stack-surface {touch-action:pinch-zoom; cursor:grab}
+.hb-experiment .stack-plane {width:100%; height:100%; position:relative; transform-origin:center}
+.hb-experiment .stack-plane img {border:0; width:100%; height:100%; object-fit:contain; image-rendering:pixelated; user-select:none}
+.hb-experiment .stack-marker {position:absolute; width:20px; height:20px; border:1px solid white; outline:1px solid black; transform:translate(-50%,-50%); pointer-events:none}
+.hb-experiment .stack-marker::before,.hb-experiment .stack-marker::after {content:''; position:absolute; background:white}
+.hb-experiment .stack-marker::before {width:30px; height:1px; left:-5px; top:9px}
+.hb-experiment .stack-marker::after {height:30px; width:1px; top:-5px; left:9px}
+.hb-experiment #stack-tabs {display:none}
+.hb-experiment #stack-tabs-hint {display:none}
+.hb-experiment .stack-plot {margin:2rem 0}
+.hb-experiment .stack-plot svg {display:block; width:100%; height:auto; font-size:16px; fill:var(--ink)}
+.hb-experiment .stack-plot span {display:inline-block; border-bottom:2px solid var(--engine); margin-right:.5rem}
+@media(max-width:600px) {
+.hb-experiment .stack-findings {grid-template-columns:1fr; gap:2rem}
+.hb-experiment .stack-panels {gap:.5rem; padding:.5rem}
+.hb-experiment .stack-detail #stack-tabs {display:flex}
+.hb-experiment .stack-detail #stack-tabs-hint {display:block; margin:.25rem 0 .5rem; font-size:.9rem}
+.hb-experiment .stack-detail .stack-panels {grid-template-columns:1fr}
+.hb-experiment .stack-detail .stack-panels figure:not(.stack-active) {display:none}
+.hb-experiment .stack-plot {overflow-x:auto}
+.hb-experiment .stack-plot svg {min-width:660px}
+}
+@media(prefers-reduced-motion:reduce) {
+.hb-experiment .stack-plane {transition:none; animation:none}
+}
+
+</style><link rel="canonical" href="https://measurethepixels.com/handbook/experiments/exposure-length.html"></head><body><!-- impeccable-direction
+THESIS: Real image evidence leads; refuse the generic centered AI-product hero.
+OWN-WORLD: Warm observatory paper, charcoal ink, hairline rules, amber instrument marks, condensed editorial type, and flat measured panels.
+STORY: See the result, understand NOVA's bounded loop, inspect its method, then follow the build or source.
+FIRST VIEWPORT: A compact thesis and action occupy the left third; the current real image dominates the right; its measured facts form the baseline.
+FORM: Scientific editorial field note, pinned by Jeff as Observatory Notebook meets modern engineering lab.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+--><a class="skip-link" href="handbook/experiments/exposure-length.html#content">Skip to content</a><nav class="site-nav" aria-label="Primary"><a class="brand" href="/"><img class="brand-mark" src="/nova-star.png" alt="">Measure the Pixels</a><div class="primary-nav"><a href="gallery.html">Images</a><a href="about.html">NOVA</a><a href="handbook/index.html" aria-current="page">Handbook</a><a href="validation/index.html">Validation</a><a href="changelog.html">Build Log</a></div><div class="utility-nav"><a href="https://www.youtube.com/@measurethepixels">YouTube ↗</a><a href="https://github.com/measurethepixels/nova">GitHub ↗</a></div></nav><main id="content"><article class="hb-experiment"><p><a href="handbook/index.html">Back to Handbook</a></p><header class="hb-head"><h1>10, 20 or 30 seconds? Two filters, one Seestar.</h1><p>Does a longer sub help under a darker narrowband sky, or does tracking loss still dominate?</p><p>In these tested stacks, 20 s has the lowest measured stack noise on both targets. M 33 has no clear depth winner after approximate smoothing; a small edge for 20 s cannot be excluded. The LP result makes the cost of short subs more visible, but does not establish its cause.</p></header><section class="companion-video">
+<h2>Watch the episode</h2>
+<p>episode: I Tested 10s vs 20s vs 30s on My Seestar S50 — 30s Lost 25%</p>
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/doUghUwZAnY"
+title="I Tested 10s vs 20s vs 30s on My Seestar S50 — 30s Lost 25%" loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe></div>
+<p><a href="https://www.youtube.com/watch?v=doUghUwZAnY">Watch on YouTube: I Tested 10s vs 20s vs 30s on My Seestar S50 — 30s Lost 25%</a></p>
+</section><section id="versions"><h2>Version-specific comparison</h2><p>Historical experiment · Siril production registration and stacking scripts · no culling. Source corrections ratified by the analysis owner before this page was built.</p></section><nav aria-label="On this page"><ul><li><a href="handbook/experiments/exposure-length.html#rig">The question and the rig</a></li><li><a href="handbook/experiments/exposure-length.html#funnel">What the S50 throws away</a></li><li><a href="handbook/experiments/exposure-length.html#depth">Depth at equal registered time</a></li><li><a href="handbook/experiments/exposure-length.html#blur">Does star size explain the LP result?</a></li><li><a href="handbook/experiments/exposure-length.html#stars">Star size and shape</a></li><li><a href="handbook/experiments/exposure-length.html#cost">The cost of usable time</a></li><li><a href="handbook/experiments/exposure-length.html#meaning">What it means</a></li><li><a href="handbook/experiments/exposure-length.html#limits">What we cannot claim</a></li><li><a href="handbook/experiments/exposure-length.html#reproduce">Reproduce it</a></li></ul></nav><section id="rig"><h2>The question and the rig</h2><p>Jeff used one Seestar S50 in EQ mode at gain 80, at one site. Each target was observed over 3 nights, rotating exposure order so each setting took each slot once.</p><p>M 33 used IR-cut; NGC 281 used the LP dual-narrowband Hα + OIII filter. The targets and nights differ, so this is a comparison of two field tests, not a controlled filter-only experiment.</p><p>The same script lineage was used: equal submitted time for timing, then equal registered integration for depth, a shared star mask and flux matching on the reference grid. Integration targets follow each dataset’s available counts.</p><p>Evidence section: Method and source precedence</p></section><section id="funnel"><h2>What the S50 throws away</h2><p>Never-saved counts are inferred from cadence gaps after allowing for overhead and dithering. Saved registration failures are measured on the equal-submitted-time timing subsets; their survival rates are extrapolated to all saved subs to estimate usable minutes per clock hour. These are different denominators.</p><p>The charts combine those stages as estimated fractions of saved plus inferred missing frames. Clock coverage is first-to-last saved timestamp plus one exposure for each block. Small rate differences have no uncertainty estimate.</p><div class="experiment-figures grid"><figure><a href="handbook/experiments/exposure-length/m33-funnel.png"><img src="handbook/experiments/exposure-length/m33-funnel.png" alt="M 33 · IR-cut: Estimated usable frames, saved registration losses and never-saved frames." width="1200" height="660" loading="lazy" decoding="async"></a><figcaption>Estimated usable frames, saved registration losses and never-saved frames.</figcaption></figure><figure><a href="handbook/experiments/exposure-length/ngc281-funnel.png"><img src="handbook/experiments/exposure-length/ngc281-funnel.png" alt="NGC 281 · LP: Estimated usable frames, saved registration losses and never-saved frames." width="1200" height="660" loading="lazy" decoding="async"></a><figcaption>Estimated usable frames, saved registration losses and never-saved frames.</figcaption></figure></div><div class="experiment-table" role="region" aria-label="What the S50 throws away table" tabindex="0"><table><caption>What the S50 throws away</caption><thead><tr><th scope="col">Target / filter</th><th scope="col">Sub</th><th scope="col">Saved</th><th scope="col">Never saved (estimated)</th><th scope="col">Registration failures / timing subset</th><th scope="col">Usable min / clock h (estimated)</th></tr></thead><tbody><tr><th scope="row">M 33 · IR-cut</th><td>10 s</td><td>624</td><td>0</td><td>2/594 (0.3%)</td><td>44.3</td></tr><tr><th scope="row">M 33 · IR-cut</th><td>20 s</td><td>355</td><td>16</td><td>32/297 (10.8%)</td><td>45.3</td></tr><tr><th scope="row">M 33 · IR-cut</th><td>30 s</td><td>198</td><td>63</td><td>42/198 (21.2%)</td><td>33.8</td></tr><tr><th scope="row">NGC 281 · LP</th><td>10 s</td><td>609</td><td>0</td><td>1/609 (0.2%)</td><td>44.5</td></tr><tr><th scope="row">NGC 281 · LP</th><td>20 s</td><td>363</td><td>4</td><td>19/304 (6.2%)</td><td>49.1</td></tr><tr><th scope="row">NGC 281 · LP</th><td>30 s</td><td>254</td><td>12</td><td>26/203 (12.8%)</td><td>46.4</td></tr></tbody></table></div><p>Evidence section: Funnel</p></section><section id="depth"><h2>Depth at equal registered time</h2><p>Noise in the 2–4px band, relative to the 20s reference within each target. Lower is quieter. Noise levels across different targets are not directly comparable. The table shows actual stacked counts, corrected for the sequence-file counting bug.</p><p>20 s has the lowest measured noise in these tested stacks. On M 33 there is no clear depth winner: after approximate smoothing, the 10 s excess is 1.0%; an edge of 1–2% for 20 s cannot be excluded.</p><div class="experiment-figures grid"><figure><a href="handbook/experiments/exposure-length/m33-noise.png"><img src="handbook/experiments/exposure-length/m33-noise.png" alt="M 33 · IR-cut: Unsmoothed noise excess relative to the within-target reference; no error bars are available." width="1200" height="660" loading="lazy" decoding="async"></a><figcaption>Unsmoothed noise excess relative to the within-target reference; no error bars are available.</figcaption></figure><figure><a href="handbook/experiments/exposure-length/ngc281-noise.png"><img src="handbook/experiments/exposure-length/ngc281-noise.png" alt="NGC 281 · LP: Unsmoothed noise excess relative to the within-target reference; no error bars are available." width="1200" height="660" loading="lazy" decoding="async"></a><figcaption>Unsmoothed noise excess relative to the within-target reference; no error bars are available.</figcaption></figure></div><div class="experiment-table" role="region" aria-label="Depth at equal registered time table" tabindex="0"><table><caption>Depth at equal registered time</caption><thead><tr><th scope="col">Target / filter</th><th scope="col">Sub</th><th scope="col">Stacked subs</th><th scope="col">Integration (s)</th><th scope="col">Noise vs reference</th></tr></thead><tbody><tr><th scope="row">M 33 · IR-cut</th><td>10 s</td><td>468</td><td>4680</td><td>+4.7%</td></tr><tr><th scope="row">M 33 · IR-cut</th><td>20 s</td><td>233</td><td>4660</td><td>+0.0%</td></tr><tr><th scope="row">M 33 · IR-cut</th><td>30 s</td><td>156</td><td>4680</td><td>+1.7%</td></tr><tr><th scope="row">NGC 281 · LP</th><td>10 s</td><td>522</td><td>5220</td><td>+11.1%</td></tr><tr><th scope="row">NGC 281 · LP</th><td>20 s</td><td>261</td><td>5220</td><td>+0.0%</td></tr><tr><th scope="row">NGC 281 · LP</th><td>30 s</td><td>174</td><td>5220</td><td>+6.6%</td></tr></tbody></table></div><p>Evidence section: Equal registered integration</p></section><section id="blur"><h2>Does star size explain the LP result?</h2><p>The LP short-sub deficit remains across the tested blur bracket and stronger smoothing. The first trial remains narrower than the reference; the next is wider. This brackets the reference size, rather than proving exact PSF equivalence. The fine-scale deficit is not explained by star-size difference in these trials.</p><p>Larger noise bands rise with blur, so they are not used as matched comparisons. The longest-sub stack was not PSF-matched; its stack-level noise gap remains unexplained. Trailed survivors and wider stars are untested candidates.</p><p>For M 33, approximately smoothed short-sub FWHM is 2.899 px versus 2.975 px for the reference; matching is approximate there too.</p><div class="experiment-table" role="region" aria-label="Does star size explain the LP result? table" tabindex="0"><table><caption>Does star size explain the LP result?</caption><thead><tr><th scope="col">LP short-sub blur σ (px)</th><th scope="col">Short-sub FWHM (px)</th><th scope="col">Reference FWHM (px)</th><th scope="col">Noise excess</th></tr></thead><tbody><tr><th scope="row">0.34</th><td>2.535</td><td>2.639</td><td>+11.0%</td></tr><tr><th scope="row">0.6</th><td>2.796</td><td>2.641</td><td>+10.8%</td></tr><tr><th scope="row">0.8</th><td>3.004</td><td>2.641</td><td>+10.4%</td></tr><tr><th scope="row">1.0</th><td>3.235</td><td>2.641</td><td>+9.7%</td></tr></tbody></table></div><p>Evidence section: PSF smoothing trials</p></section><section id="stars"><h2>Star size and shape</h2><p>Unsmoothed equal-registered stacks. FWHM measures width; eccentricity measures elongation. Neither is a calibrated tracking diagnosis.</p><div class="experiment-table" role="region" aria-label="Star size and shape table" tabindex="0"><table><caption>Star size and shape</caption><thead><tr><th scope="col">Target / filter</th><th scope="col">Sub</th><th scope="col">FWHM (px)</th><th scope="col">Eccentricity</th></tr></thead><tbody><tr><th scope="row">M 33 · IR-cut</th><td>10 s</td><td>2.756</td><td>0.458</td></tr><tr><th scope="row">M 33 · IR-cut</th><td>20 s</td><td>2.975</td><td>0.509</td></tr><tr><th scope="row">M 33 · IR-cut</th><td>30 s</td><td>2.899</td><td>0.537</td></tr><tr><th scope="row">NGC 281 · LP</th><td>10 s</td><td>2.517</td><td>0.431</td></tr><tr><th scope="row">NGC 281 · LP</th><td>20 s</td><td>2.640</td><td>0.457</td></tr><tr><th scope="row">NGC 281 · LP</th><td>30 s</td><td>2.741</td><td>0.542</td></tr></tbody></table></div><p>Evidence section: Scorer star measurements</p></section><section id="cost"><h2>The cost of usable time</h2><p>Processing is register plus stack wall time divided by the original timing run’s actual registered integration, not the depth stack duration. Storage includes saved frames that later fail registration, and uses the selected survival extrapolation.</p><p>Storage assumes 4.15 decimal MB per saved frame; it is an estimate, not a raw-byte audit. Hardware-specific timing is not a universal benchmark.</p><div class="experiment-table" role="region" aria-label="The cost of usable time table" tabindex="0"><table><caption>The cost of usable time</caption><thead><tr><th scope="col">Target / filter</th><th scope="col">Sub</th><th scope="col">Register + stack s / usable h</th><th scope="col">Estimated GB / usable h</th></tr></thead><tbody><tr><th scope="row">M 33 · IR-cut</th><td>10 s</td><td>153.3</td><td>1.50</td></tr><tr><th scope="row">M 33 · IR-cut</th><td>20 s</td><td>187.3</td><td>0.84</td></tr><tr><th scope="row">M 33 · IR-cut</th><td>30 s</td><td>279.5</td><td>0.63</td></tr><tr><th scope="row">NGC 281 · LP</th><td>10 s</td><td>219.2</td><td>1.50</td></tr><tr><th scope="row">NGC 281 · LP</th><td>20 s</td><td>219.6</td><td>0.80</td></tr><tr><th scope="row">NGC 281 · LP</th><td>30 s</td><td>266.6</td><td>0.57</td></tr></tbody></table></div><p>Evidence section: Cost formulas</p></section><section id="meaning"><h2>What it means</h2><p>On LP, the shortest subs are about eleven percent noisier at the tested fine scale. This is consistent with a read-noise penalty under the darker sky; read noise is a hypothesis, not a finding. No bias/dark calibration established causation.</p><p>The longest-sub stack-level gap is unexplained. Shorter subs retain more frames and rounder stars; the reference exposure balances measured depth, usable time and storage in these field tests. These results do not prescribe one exposure for every sky, target or mount.</p><p>Evidence section: Interpretation and limits</p></section><section id="limits"><h2>What we cannot claim</h2><ul><li>3 nights per target; one stack per exposure and no uncertainty estimate.</li><li>Partial PSF matching; the longest LP subs are unmatched. No bias/dark calibration.</li><li>Different targets and nights confound a filter-only causal comparison.</li><li>Sky samples are 71.85% for M 33 and 65.59% for NGC 281. Retained footprint is not star-mask coverage.</li></ul></section><section id="reproduce"><h2>Reproduce it</h2><ul><li>Use the committed source snapshot and its source hashes; the evidence record documents key selection and formulas.</li><li>Regenerate the static figures with the committed builder. Original analysis and archive access are available by request.</li></ul><p>Pinned evidence record: <code>docs/experiments/exposure_length.md</code> at <code>72dbbadff006ef0c18024e7aa955c1496bf356ac</code> · content revision 1. Evidence and archive access are by request.</p></section></article></main><footer><div>NOVA / bounded decisions · recorded evidence · human review<br>
+<a href="https://github.com/measurethepixels/nova">GitHub</a> · <a href="https://www.youtube.com/@measurethepixels">YouTube</a> · <a href="privacy.html">Privacy</a></div>
+<div class="footer-tag">Measure the pixels. Make the call.<br>
+© 2026 Jeff. Measure the Pixels™. All rights reserved.</div></footer></body></html>
