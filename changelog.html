@@ -82,6 +82,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <p>Human-readable mirror of <code>workflow_history.json</code> (the machine source of truth). The <b>current version</b> is stamped into every run&#x27;s <code>run.log</code> (<code>workflow_version</code>) and inherited by each saved critique, so the batch evaluation can group runs by the pipeline version that produced them.</p>
 <p><b>Semver policy (scoring pipeline):</b> <li><b>MAJOR</b> — scoring model or step add/remove; scores no longer comparable across</li>   versions (resets the critique baseline). <li><b>MINOR</b> — param/threshold/gate tuning that changes output but keeps comparability.</li> <li><b>PATCH</b> — bug fix not expected to change good-run output.</li></p>
 <p><b>To bump:</b> append a new entry to <code>workflow_history.json</code> (set <code>current</code> and add to <code>versions</code>), mirror it here, and record which critiques drove the change. Code reads the latest version automatically — no other edit needed.</p>
+<h2>2.22.0 — 2026-11-12</h2>
+<ul><li>Stop LP colour calibration immediately when all permitted methods refuse;</li>
+  transient engine errors fail rather than becoming calibration refusals.
+<li>Preserve post-BGE input/header, SPCC parameters, reports and qualification</li>
+  receipts. Record terminal refusals as Studio suggestions, with attempt history,
+  daily new-item notifications, and resolution on a newer accepted/manual final.
+<li>No calibration thresholds or permitted methods change (#1335).</li></ul>
 <h2>2.21.0 — 2026-11-09 (minor; #1329)</h2>
 <p>LP SPCC uses an explicit photon-flux G2V white, ≥100 fitted stars, diagonal extraction/clipping checks and ≤0.1% agreement with SPCC&#x27;s own factors. A stable ≥100-star XP fit must agree within 5% on both G/R and B/G. Brightness, x/y spatial and stellar-colour halves test XP systematics. Unqualified XP permits labelled <code>SPCC_ONLY</code> under <code>ALLOW_SPCC_ONLY_PUBLICATION=True</code> (Henry&#x27;s choice at merge). Failed SPCC or disagreement with qualified XP refuses library publication. The photon-corrected camera model is diagnostic only; silent fallback is removed. Broadband calibration is unchanged. Real-field receipts and blind acceptance remain separate from code implementation and CI; this is not rollout authority.</p>
 <h2>2.20.0 — 2026-11-04 (minor; #1284)</h2>
