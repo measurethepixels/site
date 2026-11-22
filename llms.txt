@@ -1,0 +1,11 @@
+# Measure the Pixels
+
+Jeff shares Seestar S50 astrophotography, measured image processing, and the development of NOVA on the Measure the Pixels site and channel.
+
+This experimental index lists selected public pages.
+
+- [Home](https://measurethepixels.com/): Jeff's Seestar S50 astrophotography and NOVA project.
+- [About NOVA](https://measurethepixels.com/about.html): Measured processing and the system's limits.
+- [Handbook](https://measurethepixels.com/handbook/): Authored processing methods and evidence.
+- [Gallery](https://measurethepixels.com/gallery.html): Finished images and recorded assessments.
+- [Build log](https://measurethepixels.com/changelog.html): Experiments and processing changes.
